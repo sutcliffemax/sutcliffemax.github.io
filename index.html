@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,27 +26,33 @@
     <div class="myWeek1">
         <h1>Data Science for Economists.</h1>
         
-        <h3>Covid-19</h3>
-        <p>The first chart tracks Covid-19 cases by UK region.</p>
-        <div class="chart" id="Chart1"></div>
+        <h3>Inflation</h3>
+        <p>The first chart compares three measures of inflation in the UK.</p>
+        <div class="chart" id="chart1"></div>
 
-        <h3>Productivity puzzle</h3>
-        <p>My second chart looks at productivity in the UK</p>
-        <div class="chart" id="Chart2"> </div>
+        <h3>Bitcoin</h3>
+        <p>My second chart looks at the price of Bitcoin in USD</p>
+        <div class="chart" id="chart2"> </div>
+
+        <h3>Extreme Demographics</h3>
+        <p>My third chart looks at the aging population</p>
+        <div class="chart" id="chart3"> </div>
     </div> 
 </body>
 
 
 <script>
     //Define charts:
-    var myChart1 = "chart1_covidUKRegions.json";
-    var myChart2 = "chart2_ukProductivity.json";
+    var myChart1 = "chartINF2.json";
+    var myChart2 = "chartcrypto1.json";
+    var myChart3 = "chartextreme1.json";
 
-    // Embed charts:
-    vegaEmbed('#Chart1', myChart1);
-    vegaEmbed('#Chart2', myChart2);
+ // Embed charts:
+ vegaEmbed('#chart1', myChart1);
+ vegaEmbed('#chart2', myChart2);
+ vegaEmbed('#chart3', myChart3);
+    // vegaEmbed('#chart4', myChart4);
+    // vegaEmbed('#chart5', myChart5);
 </script>
 
 </html>
-
-
