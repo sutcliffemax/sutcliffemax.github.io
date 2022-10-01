@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,29 +31,31 @@
         <p>The first chart compares three measures of inflation in the UK.</p>
         <div class="chart" id="chart1"></div>
 
-        <h3>Bitcoin</h3>
-        <p>The second chart looks at the price of Bitcoin in USD</p>
-        <div class="chart" id="chart2"> </div>
-
         <h3>Extreme Demographics</h3>
-        <p>The third chart looks at the aging population</p>
-        <div class="chart" id="chart3"> </div>
+        <p>The second chart looks at the aging population</p>
+        <div class="chart" id="chart2"> </div>
+   
+        <!-- <h3>Bitcoin</h3>
+        <p>The second chart looks at the price of Bitcoin in USD</p>
+        <div class="chart" id="chart2"> </div> -->
     </div> 
+       
 </body>
 
 
 <script>
     //Define charts:
     var myChart1 = "chartINF2.json";
-    var myChart2 = "chartcrypto1.json";
-    var myChart3 = "chartextreme1.json";
+    var myChart2 = "chartextreme1.json";
 
  // Embed charts:
  vegaEmbed('#chart1', myChart1);
  vegaEmbed('#chart2', myChart2);
- vegaEmbed('#chart3', myChart3);
+    // vegaEmbed('#chart3', myChart3);
     // vegaEmbed('#chart4', myChart4);
     // vegaEmbed('#chart5', myChart5);
 </script>
 
 </html>
+
+
