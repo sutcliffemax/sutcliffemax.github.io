@@ -1,0 +1,40 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+      "text": "Total IMF Credit Outstanding for all members from 1984-2022",
+      "subtitle":"Loans disbursed (nominal $bn). Source: IMF Parliament",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+  
+  "data":{"url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/extcred1.csv"},
+
+  "transform":[ 
+    {"calculate":"datum.Totals/1000000000", "as": "Billions"}
+  ], 
+  
+  "height": 300,
+  "width": 300,
+
+  "mark": {
+    "type": "bar",
+    "color": "#26559c"},
+
+"encoding": {
+     "x": {
+       "field": "Year",
+       "type": "temporal",
+       "axis": {
+         "title": null,
+         "grid": false,
+         "ticks": false,
+         "labelAngle": 45}},
+
+      "y": {
+        "field": "Billions",
+        "type": "quantitative",
+        "title": "",
+        "axis": {"grid": false}}
+}
+}
