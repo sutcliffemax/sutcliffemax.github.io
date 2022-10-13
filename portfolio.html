@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title for the page -->
+    <title>Document</title>
+
+    <!-- Link to my style sheet -->
+    <link rel="stylesheet" href="portfolio.css">
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+    <style>
+        a:link {
+          text-decoration: underline;
+          color: #B3B3B3;
+        }
+    
+        a:visited {
+          text-decoration: underline;
+          color: #B3B3B3;
+        }
+    
+        a:hover {
+          text-decoration: none;
+          color: #B3B3B3;
+        }
+    
+        a:active {
+          text-decoration: none;
+          color: #B3B3B3;
+        }
+    
+        @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap');
+      </style>
+    
+      <script src="https://kit.fontawesome.com/6782582340.js" crossorigin="anonymous"></script>
+      <!--The next three lines allow the Vega embed-->
+      <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+    
+    
+    </head>
+    
+    <!--olympinomics -->
+
+    <!-- ///////////////////  HEAD //////////////////////////////////// -->
+    
+    
+    
+    <!-- ///////////////////  START BODY //////////////////////////////////// -->
+    
+    <body>
+    
+      <!--These lines allow my loading screen to show up-->
+      <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!--Navigation sidebar icons-->
+      <section class="main">
+        <div class="navigation">
+          <ul>
+            <li>
+              <a href="index.html">
+                <span class="icon"><i class="fas fa-home"></i></span>
+                <span class="title">Home</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="portfolio.html">
+                <span class="icon"><i class="fas fa-folder-open"></i></span>
+                <span class="title">Portfolio</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="project.html">
+                <span class="icon"><i class="fas fa-question"></i></span>
+                <span class="title">Project</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="https://rapidcharts.io/datascience">
+                <span class="icon"><i class="fas fa-laptop"></i></span>
+                <span class="title">Data Science Course</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="https://github.com/sutcliffemax/sutcliffemax.github.io">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span class="title">Github Repository</span>
+              </a>
+            </li>
+    
+          </ul>
+        </div>
+
+        <!--Simple Javascript that allows the hover function of my navbar to work-->
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <script type="text/javascript">
+          function toggleMenu() {
+            let navigation = document.querySelector('.navigation');
+            let toggle = document.querySelector('.toggle')
+            navigation.classList.toggle('active');
+            toggle.classList.toggle('active');
+          }
+        </script>
+</head>
+
+  <!--olympinomics -->
+
+<body>
+    <!-- A div that contains a group of items for week 1. Can be useful for setting background colours etc.  -->
+    <div class="myWeek1">
+
+        <h1>Data Science - Max Sutcliffe </h1>
+
+        <h3>Week 1</h3> 
+        <p> Homework 1: Embed two interactive charts onto your website.</p>
+        
+        <h3>Inflation</h3>
+        <p>The first chart compares three measures of inflation in the UK.</p>
+        <div class="chart" id="chart1"></div>
+
+        <h3>Extreme Demographics</h3>
+        <p>The second chart looks at the aging population</p>
+        <div class="chart" id="chart2"> </div>
+
+    </div>
+
+    <div class="myWeek2">
+            <h3>Week 2</h3>
+            <p> Homework 2: Build three live charts and embed them onto your page. The first two is ran directly from your GitHub, the third directly through an API.</p>
+            <h3>Total IMF Credit outstanding</h3>
+            <p>The first chart shows the nominal value of credit outstanding for all IMF members ($bn)</p>
+            <div class="chart" id="chart3"></div>
+
+            <h3>In real terms</h3>
+            <p>To understand the severity of the debt, we correct the credit outstanding by dividing through by the value of world GDP each year (in current USD). This graph shows that despite IMF credit payments increasing over time, their size rlative to GDP is trending downwards</p>
+            <div class="chart" id="chart4"> </div>
+
+    </div> 
+
+       
+</body>
+
+
+<script>
+    //Define charts:
+    var myChart1 = "chartINF2.json";
+    var myChart2 = "chartextreme1.json";
+    var myChart3 = "IMFcredit.json";
+    var myChart4 = "IMFcredit%GDP.json";
+
+ // Embed charts:
+ vegaEmbed('#chart1', myChart1);
+ vegaEmbed('#chart2', myChart2);
+ vegaEmbed('#chart3', myChart3);
+ vegaEmbed('#chart4', myChart4);
+    // vegaEmbed('#chart5', myChart5);
+</script>
+
+</html>
