@@ -1,8 +1,3 @@
-/* Richard Davies, Data Science for Economists */
-
-/* This is my first proper css file */
-
-
 /* Import a font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
@@ -15,34 +10,112 @@ body{
 
 
 /* Choose the appearance of the tags, h1, h3 and p: */
+
 h1, h3, p{
     color:rgb(17, 17, 17);
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
+
+.Homepage{
+margin: auto;
+margin-top: 1%;
+margin-bottom: 0%;
+max-width: 800px;
+background-color: rgb(192, 220, 233);
+border-width: 5px;
+border-style: solid;
+border-radius: 10px;
+border-color: rgb(8, 36, 92);
+}
+
+
+
+/* BUTTONS */
+
+a{
+    border: 5px;
+    border-color: black;
+    border-style: solid;
+
+    margin:20px
+}
+
+#link1{
+    background-color: rgb(8, 36, 92);
+
+    padding:20px;
     
-.myWeek1{
-    margin: auto;
-    max-width: 800px;
-    background-color: rgb(192, 220, 233);
-    border-width: 5px;
+    border:2px;
+    border-color:black;
     border-style: solid;
     border-radius: 10px;
-    border-color: rgb(8, 36, 92);
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+    color:white;
+    
+    text-decoration: none;
 }
 
+#link1:hover{
 
-/* Set the apperance of the class, chart */
-.chart{
-    display:block;
-    margin-left: 25%;
-    margin-right: 25%;
-    background-color: rgb(255, 255, 255);
-    width: 400px;
-    border-width: 3px;
+    background-color: rgba(8, 36, 92, .5);
+
+    border:2px;
+    border-color:yellow;
     border-style: solid;
-    border-radius: 5px;
-    border-color: rgb(8,36,92);
 }
 
+#link2{
+    background-color: rgb(8, 36, 92);
 
+    padding:20px;
+    
+    border:2px;
+    border-color:black;
+    border-style: solid;
+    border-radius: 10px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+    color:white;
+    
+    text-decoration: none;
+
+}
+
+#link2:hover{
+
+    background-color: rgba(8, 36, 92, .5);
+
+    border:2px;
+    border-color:yellow;
+    border-style: solid;
+}
+
+#link3{
+    background-color: rgb(8, 36, 92);
+
+    padding:20px;
+    
+    border:2px;
+    border-color:black;
+    border-style: solid;
+    border-radius: 10px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+    color:white;
+    
+    text-decoration: none;
+}
+
+#link3:hover{
+
+    background-color: rgba(8, 36, 92, .5);
+
+    border:2px;
+    border-color:yellow;
+    border-style: solid;
+}
