@@ -59,6 +59,20 @@ h1, h3, p{
 
 }
 
+
+.myWeek3{
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  max-width: 800px;
+  background-color: rgb(192, 220, 233);
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgb(8, 36, 92);
+
+}
+
 /* Set the apperance of the class, chart */
 .chart{
     display:block;
@@ -71,6 +85,11 @@ h1, h3, p{
     border-radius: 5px;
     border-color: rgb(8,36,92);
 }
+
+
+
+
+
 
 
 /* All styling for my side navigation bar */
