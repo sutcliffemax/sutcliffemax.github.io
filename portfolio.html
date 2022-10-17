@@ -145,15 +145,17 @@
     </div>
 
     <div class="myWeek2">
-            <h3>Week 2</h3>
-            <p> Homework 2: Build three live charts and embed them onto your page. The first two is ran directly from your GitHub, the third directly through an API.</p>
-            <h3>Total IMF Credit outstanding</h3>
-            <p>The first chart shows the nominal value of credit outstanding for all IMF members ($bn)</p>
-            <div class="chart" id="chart3"></div>
 
-            <h3>In real terms</h3>
-            <p>To understand the severity of the debt, we correct the credit outstanding by dividing through by the value of world GDP each year (in current USD). This graph shows that despite IMF credit payments increasing over time, their size rlative to GDP is trending downwards</p>
-            <div class="chart" id="chart4"> </div>
+          <h3>Week 2</h3>
+          <p> Homework 2: Build three live charts and embed them onto your page. The first two is ran directly from your GitHub, the third directly through an API.</p>
+
+          <h3>Total IMF Credit outstanding</h3>
+          <p>The first chart shows the nominal value of credit outstanding for all IMF members ($bn)</p>
+          <div class="chart" id="chart3"></div>
+
+          <h3>In real terms</h3>
+          <p>To understand the severity of the debt, we correct the credit outstanding by dividing through by the value of world GDP each year (in current USD). This graph shows that despite IMF credit payments increasing over time, their size rlative to GDP is trending downwards</p>
+          <div class="chart" id="chart4"></div>
 
     </div> 
 
@@ -166,7 +168,7 @@
     var myChart1 = "chartINF2.json";
     var myChart2 = "chartextreme1.json";
     var myChart3 = "IMFcredit.json";
-    var myChart4 = "IMFcredit%GDP.json";
+    var myChart4 = "IMFGDP.json";
 
  // Embed charts:
  vegaEmbed('#chart1', myChart1);
