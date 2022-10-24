@@ -1,0 +1,47 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+      "text": "Top 10 Olympic Gold Medal Winners",
+      "subtitle":"Athletes with the most Olympic gold medals of all time",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+
+       "height": 300,
+  "width": 400,
+  
+  
+  "data": {
+    
+    "values":[{"Unnamed: 0": 0, "Athlete": "Michael Phelps", "Sport": "Swimming", "Total Golds": 23}, {"Unnamed: 0": 1, "Athlete": "Larisa Latynina", "Sport": "Gymnastics", "Total Golds": 9}, {"Unnamed: 0": 2, "Athlete": "Paavo Nurmi", "Sport": "Athletics", "Total Golds": 9}, {"Unnamed: 0": 3, "Athlete": "Mark Spitz", "Sport": "Swimming", "Total Golds": 9}, {"Unnamed: 0": 4, "Athlete": "Carl Lewis", "Sport": "Athletics", "Total Golds": 9}, {"Unnamed: 0": 5, "Athlete": "Birgit Fischer", "Sport": "Canoeing", "Total Golds": 8}, {"Unnamed: 0": 6, "Athlete": "Sawao Kato", "Sport": "Gymnastics", "Total Golds": 8}, {"Unnamed: 0": 7, "Athlete": "Jenny Thompson", "Sport": "Swimming", "Total Golds": 8}, {"Unnamed: 0": 8, "Athlete": "Matt Biondi", "Sport": "Swimming", "Total Golds": 8}, {"Unnamed: 0": 9, "Athlete": "Usain Bolt", "Sport": "Athletics", "Total Golds": 8}, {"Unnamed: 0": 10, "Athlete": "Ray Ewry", "Sport": "Athletics", "Total Golds": 8}]
+  },
+  
+  
+ 
+
+  "mark": {
+    "type": "bar",
+    "color": "darkblue"},
+
+"encoding": {
+     "x": {
+       "field": "Athlete",
+       "sort": "y",
+       
+       "type": "ordinal",
+       "axis": {
+         "title": "Athlete",
+         "labelFontSize": 8,
+         "grid": false,
+         "ticks": false,
+         "labelAngle": 320}},
+
+      "y": {
+        "field": "Total Golds",
+        "type": "quantitative",
+        "title": "Gold Medals",
+        
+        "axis": {"grid": false}}
+}
+}
