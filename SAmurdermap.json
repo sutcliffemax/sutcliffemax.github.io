@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "South America murders rates in 2021",
+      "subtitle": "Homocides per 100,000. Source: insightcrime.org",
+      "anchor": "start",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10
+    },
+    "width": 400,
+    "height": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/southamerica.geojson",
+      "format": {"property": "features"}
+    },
+    "projection": {"type": "mercator"},
+  
+    "transform": [
+      {
+        "lookup": "properties.name",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/SAhomocides.csv"
+          },
+          "key": "Country",
+          "fields": ["Homocide rate"]
+        }
+      }
+    ],
+    "mark": {
+      "type": "geoshape",
+      "stroke": "black",
+      "xyzfill": "lightgray",
+      "strokeWidth": 0.5
+    },
+  
+    "encoding":{
+  
+    "color": {
+        "field": "Homocide rate",
+        "type": "quantitative",
+        "title": "Homocides per 100,000"
+      },
+    
+     "tooltip": [
+      {"field": "properties.name", "type": "nominal"},
+      {"field": "Homocide rate", "type": "quantitative"}]
+     }}

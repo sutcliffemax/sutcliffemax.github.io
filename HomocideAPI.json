@@ -1,0 +1,48 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+      "text": "Homocides",
+      "subtitle":"Intentional UK homocides per 100 000 people",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+
+       "height": 300,
+  "width": 400,
+  
+  
+  "data": {
+    
+    "values":[{"Year": 1990, "Homocides": 1.24871696}, {"Year": 1991, "Homocides": 1.281490995}, {"Year": 1992, "Homocides": 1.512583421}, {"Year": 1993, "Homocides": 1.536397544}, {"Year": 1994, "Homocides": 1.590973326}, {"Year": 1995, "Homocides": 1.553533469}, {"Year": 1996, "Homocides": 1.445445928}, {"Year": 1997, "Homocides": 1.483518707}, {"Year": 1998, "Homocides": 1.574090652}, {"Year": 1999, "Homocides": 1.56686799}, {"Year": 2000, "Homocides": 1.552866052}, {"Year": 2001, "Homocides": 1.633846618}, {"Year": 2002, "Homocides": 1.865951714}, {"Year": 2003, "Homocides": 1.55469742}, {"Year": 2004, "Homocides": 1.586698191}, {"Year": 2005, "Homocides": 1.383360951}, {"Year": 2006, "Homocides": 1.413977188}, {"Year": 2007, "Homocides": 1.420548063}, {"Year": 2008, "Homocides": 1.226162681}, {"Year": 2009, "Homocides": 1.123691719}, {"Year": 2010, "Homocides": 1.191305343}, {"Year": 2011, "Homocides": 1.001219551}, {"Year": 2012, "Homocides": 0.971711871}, {"Year": 2013, "Homocides": 0.927920505}, {"Year": 2014, "Homocides": 0.900294343}, {"Year": 2015, "Homocides": 0.989976503}, {"Year": 2016, "Homocides": 1.190082154}, {"Year": 2017, "Homocides": 1.212394363}, {"Year": 2018, "Homocides": 1.124487833}]
+  },
+  
+
+ 
+
+  "mark": {
+    "type": "line",
+    "color": "darkblue"},
+
+"encoding": {
+     "x": {
+       "field": "Year",
+       
+       "type": "ordinal",
+       "axis": {
+         "title": null,
+         "labelFontSize": 8,
+         "grid": false,
+         "ticks": false,
+         "labelAngle": 45}},
+
+      "y": {
+        "field": "Homocides",
+        "type": "quantitative",
+        "title": "Homocides per 100 000",
+       "scale": {"domain": [0.8, 2]},
+        "axis": {"grid": false}}
+
+         
+}
+}

@@ -4,45 +4,70 @@
 
 /* Set the background color for my page: */
 body{
-    background-color: rgb(214, 215, 217);
+    background-image: url('imagewave.jpg');
+    /* background-size: cover;  */
  
 }
 
 
 /* Choose the appearance of the tags, h1, h3 and p: */
 
-h1, h3, p{
-    color:rgb(17, 17, 17);
-    font-family: 'Roboto', sans-serif;
+h1, p{
+    color:rgb(210, 210, 210);
+    font-family: 'Merriweather', sans-serif;
+    text-align: center;
+
+    /* text-decoration: underline; */
+}
+h3{
+    color:rgb(210, 210, 210);
+    font-family: 'Merriweather', sans-serif;
     text-align: center;
 }
 
-.Homepage{
-margin: auto;
-margin-top: 1%;
-margin-bottom: 0%;
-max-width: 800px;
-background-color: rgb(192, 220, 233);
-border-width: 5px;
-border-style: solid;
-border-radius: 10px;
-border-color: rgb(8, 36, 92);
+
+/* .Homepage{
+
+    margin-left: auto ;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    width: 60%;  
+    max-width: 1000px;
+    background-color: rgb(18, 18, 18);
+    border-width: 1px;
+    border-style: outset;
+    border-radius: 0px;
+    border-color: rgb(8, 36, 92); 
+    text-align: center; 
+
 }
-
-
+    */
 
 /* BUTTONS */
 
 a{
-    border: 5px;
-    border-color: black;
-    border-style: solid;
+    display: block;
+    text-align: center;
+    width: 20%;
+    margin:20px;
+    margin: auto;
+    
+    
+    
 
-    margin:20px
-}
+}  
+
+.center-text {
+    text-align: center;
+  }
+  
+  a.center-text {
+    display: block;
+  }
 
 #link1{
-    background-color: rgb(8, 36, 92);
+    background-color: rgb(8, 36, 92, .5);
 
     padding:20px;
     
@@ -57,18 +82,20 @@ a{
     
     text-decoration: none;
 }
+    
 
 #link1:hover{
 
-    background-color: rgba(8, 36, 92, .5);
+    background-color: rgba(8, 36, 92);
 
     border:2px;
     border-color:yellow;
     border-style: solid;
+    
 }
 
 #link2{
-    background-color: rgb(8, 36, 92);
+    background-color: rgb(8, 36, 92, .5);
 
     padding:20px;
     
@@ -76,764 +103,40 @@ a{
     border-color:black;
     border-style: solid;
     border-radius: 10px;
-
     font-family: 'Courier New', Courier, monospace;
     font-weight:700;
     color:white;
     
     text-decoration: none;
+
 
 }
 
 #link2:hover{
 
-    background-color: rgba(8, 36, 92, .5);
-
+    background-color: rgba(8, 36, 92);
     border:2px;
     border-color:yellow;
     border-style: solid;
 }
 
 #link3{
-    background-color: rgb(8, 36, 92);
-
+    background-color: rgb(8, 36, 92, .5);
     padding:20px;
-    
     border:2px;
     border-color:black;
     border-style: solid;
     border-radius: 10px;
-
     font-family: 'Courier New', Courier, monospace;
     font-weight:700;
     color:white;
-    
+  
     text-decoration: none;
 }
 
 #link3:hover{
 
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}/* Import a font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-
-/* Set the background color for my page: */
-body{
-    background-color: rgb(214, 215, 217);
- 
-}
-
-
-/* Choose the appearance of the tags, h1, h3 and p: */
-
-h1, h3, p{
-    color:rgb(17, 17, 17);
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-.Homepage{
-margin: auto;
-margin-top: 1%;
-margin-bottom: 0%;
-max-width: 800px;
-background-color: rgb(192, 220, 233);
-border-width: 5px;
-border-style: solid;
-border-radius: 10px;
-border-color: rgb(8, 36, 92);
-}
-
-
-
-/* BUTTONS */
-
-a{
-    border: 5px;
-    border-color: black;
-    border-style: solid;
-
-    margin:20px
-}
-
-#link1{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-}
-
-#link1:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}
-
-#link2{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-
-}
-
-#link2:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}
-
-#link3{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-}
-
-#link3:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}/* Import a font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-
-/* Set the background color for my page: */
-body{
-    background-color: rgb(214, 215, 217);
- 
-}
-
-
-/* Choose the appearance of the tags, h1, h3 and p: */
-
-h1, h3, p{
-    color:rgb(17, 17, 17);
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-.Homepage{
-margin: auto;
-margin-top: 1%;
-margin-bottom: 0%;
-max-width: 800px;
-background-color: rgb(192, 220, 233);
-border-width: 5px;
-border-style: solid;
-border-radius: 10px;
-border-color: rgb(8, 36, 92);
-}
-
-
-
-/* BUTTONS */
-
-a{
-    border: 5px;
-    border-color: black;
-    border-style: solid;
-
-    margin:20px
-}
-
-#link1{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-}
-
-#link1:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}
-
-#link2{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-
-}
-
-#link2:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}
-
-#link3{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-}
-
-#link3:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}/* Import a font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-
-/* Set the background color for my page: */
-body{
-    background-color: rgb(214, 215, 217);
- 
-}
-
-
-/* Choose the appearance of the tags, h1, h3 and p: */
-
-h1, h3, p{
-    color:rgb(17, 17, 17);
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-.Homepage{
-margin: auto;
-margin-top: 1%;
-margin-bottom: 0%;
-max-width: 800px;
-background-color: rgb(192, 220, 233);
-border-width: 5px;
-border-style: solid;
-border-radius: 10px;
-border-color: rgb(8, 36, 92);
-}
-
-
-
-/* BUTTONS */
-
-a{
-    border: 5px;
-    border-color: black;
-    border-style: solid;
-
-    margin:20px
-}
-
-#link1{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-}
-
-#link1:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}
-
-#link2{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-
-}
-
-#link2:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}
-
-#link3{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-}
-
-#link3:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}/* Import a font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-
-/* Set the background color for my page: */
-body{
-    background-color: rgb(214, 215, 217);
- 
-}
-
-
-/* Choose the appearance of the tags, h1, h3 and p: */
-
-h1, h3, p{
-    color:rgb(17, 17, 17);
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-.Homepage{
-margin: auto;
-margin-top: 1%;
-margin-bottom: 0%;
-max-width: 800px;
-background-color: rgb(192, 220, 233);
-border-width: 5px;
-border-style: solid;
-border-radius: 10px;
-border-color: rgb(8, 36, 92);
-}
-
-
-
-/* BUTTONS */
-
-a{
-    border: 5px;
-    border-color: black;
-    border-style: solid;
-
-    margin:20px
-}
-
-#link1{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-}
-
-#link1:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}
-
-#link2{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-
-}
-
-#link2:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}
-
-#link3{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-}
-
-#link3:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}/* Import a font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-
-/* Set the background color for my page: */
-body{
-    background-color: rgb(214, 215, 217);
- 
-}
-
-
-/* Choose the appearance of the tags, h1, h3 and p: */
-
-h1, h3, p{
-    color:rgb(17, 17, 17);
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-.Homepage{
-margin: auto;
-margin-top: 1%;
-margin-bottom: 0%;
-max-width: 800px;
-background-color: rgb(192, 220, 233);
-border-width: 5px;
-border-style: solid;
-border-radius: 10px;
-border-color: rgb(8, 36, 92);
-}
-
-
-
-/* BUTTONS */
-
-a{
-    border: 5px;
-    border-color: black;
-    border-style: solid;
-
-    margin:20px
-}
-
-#link1{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-}
-
-#link1:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}
-
-#link2{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-
-}
-
-#link2:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}
-
-#link3{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-}
-
-#link3:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}/* Import a font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-
-/* Set the background color for my page: */
-body{
-    background-color: rgb(214, 215, 217);
- 
-}
-
-
-/* Choose the appearance of the tags, h1, h3 and p: */
-
-h1, h3, p{
-    color:rgb(17, 17, 17);
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-.Homepage{
-margin: auto;
-margin-top: 1%;
-margin-bottom: 0%;
-max-width: 800px;
-background-color: rgb(192, 220, 233);
-border-width: 5px;
-border-style: solid;
-border-radius: 10px;
-border-color: rgb(8, 36, 92);
-}
-
-
-
-/* BUTTONS */
-
-a{
-    border: 5px;
-    border-color: black;
-    border-style: solid;
-
-    margin:20px
-}
-
-#link1{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-}
-
-#link1:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}
-
-#link2{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-
-}
-
-#link2:hover{
-
-    background-color: rgba(8, 36, 92, .5);
-
-    border:2px;
-    border-color:yellow;
-    border-style: solid;
-}
-
-#link3{
-    background-color: rgb(8, 36, 92);
-
-    padding:20px;
-    
-    border:2px;
-    border-color:black;
-    border-style: solid;
-    border-radius: 10px;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:700;
-    color:white;
-    
-    text-decoration: none;
-}
-
-#link3:hover{
-
-    background-color: rgba(8, 36, 92, .5);
+    background-color: rgba(8, 36, 92);
 
     border:2px;
     border-color:yellow;

@@ -51,7 +51,6 @@
     
     </head>
     
-    <!--olympinomics -->
 
     <!-- ///////////////////  HEAD //////////////////////////////////// -->
     
@@ -123,7 +122,6 @@
         </script>
 </head>
 
-  <!--olympinomics -->
 
 <body>
     <!-- A div that contains a group of items for week 1. Can be useful for setting background colours etc.  -->
@@ -132,7 +130,7 @@
         <h1>Data Science - Max Sutcliffe </h1>
 
         <h3>Week 1</h3> 
-        <p> Homework 1: Embed two interactive charts onto your website.</p>
+        <p>Embed two interactive charts onto your website.</p>
         
         <h3>Inflation</h3>
         <p>The first chart compares three measures of inflation in the UK.</p>
@@ -142,12 +140,14 @@
         <p>The second chart looks at the aging population</p>
         <div class="chart" id="chart2"> </div>
 
+        <br>
+
     </div>
 
     <div class="myWeek2">
 
           <h3>Week 2</h3>
-          <p> Homework 2: Build three live charts and embed them onto your page. The first two is ran directly from your GitHub, the third directly through an API.</p>
+          <p>Build two live charts and embed them onto your page, ran directly from your GitHub.</p>
 
           <h3>Total IMF Credit outstanding</h3>
           <p>The first chart shows the nominal value of credit outstanding for all IMF members ($bn)</p>
@@ -156,11 +156,158 @@
           <h3>In real terms</h3>
           <p>To understand the severity of the debt, we correct the credit outstanding by dividing through by the value of world GDP each year (in current USD). This graph shows that despite IMF credit payments increasing over time, their size rlative to GDP is trending downwards</p>
           <div class="chart" id="chart4"></div>
+          <p>IMF lent the most, relative to World GDP, in 1984 which implies that this was the "riskiest" year.</p>
 
     </div> 
 
+
+    <div class="myWeek3">
+     
+      <h3>Week 3</h3>
+      <p> Create a chart in Vega-lite with source defined inline (exporting JSON using the python data conversion pipelines). Then create a second chart with different visual endcoding.</p>
+
+      <h3>Drug use</h3>
+
+      <div class="chart" id="chart5"></div>
+      
+      <br>
+
+      <div class="chart" id="chart6"></div>
+      <p>The visual encoding was modified from a bar chart to a line chart.</p>
+      <br>
+     
+
+    </div> 
+
+    <div class="myWeek4">
+
+      <h3>Week 4</h3>
+      <p> Implement a data scraper of your own from any source. Then clean and normalise the data and export into TIDY format.</p>
+
+      <h3>Bristol crime statistics </h3>
+      <div class="chart" id="chart7"></div>
        
-</body>
+    <p >To access the code behind the scraper, click <a class="textLink" href="https://colab.research.google.com/drive/1VYH75eN9BzjU3X_kdR4IicyEpsv7mIly#scrollTo=9gKucAzVHxaL"> here</a>.</p> 
+    
+   
+
+      <p>The website did not prevent me from scraping the data. However, the table had multible pages, so rather than using the URL I created HTML file with the table elements.</p>
+    
+    </div> 
+
+    <div class="myWeek5">
+
+      <h3>Week 5</h3>
+
+      <p> Use the ONS API to batch download nine different series as JSON files. Then use these to supply the data to nine charts .</p>
+
+      <div class="grid-container" style = "display: grid;">
+        <div class="grid-item"><div class = dashchart id = "chart8" style = "display: block;"></div></div>
+        <div class="grid-item"><div class = dashchart id = "chart9" style = "display: block;"></div></div>
+        <div class="grid-item"><div class = dashchart id = "chart10" style = "display: block;"></div></div>
+        <div class="grid-item"><div class = dashchart id = "chart11" style = "display: block;"></div></div>
+        <div class="grid-item"><div class = dashchart id = "chart12" style = "display: block;"></div></div>
+        <div class="grid-item"><div class = dashchart id = "chart13" style = "display: block;"></div></div>
+        <div class="grid-item"><div class = dashchart id = "chart14" style = "display: block;"></div></div>
+        <div class="grid-item"><div class = dashchart id = "chart15" style = "display: block;"></div></div>
+        <div class="grid-item"><div class = dashchart id = "chart16" style = "display: block;"></div></div>
+
+     
+      </div>
+
+      
+      <p >To access the python code behind these labour market charts, click <a class="textLink" href="https://colab.research.google.com/drive/1pd0IN9IaxnSyoOK6PNo2QPS6B_TRedwr#scrollTo=SenLVLUfn0W3"> here</a>.</p> 
+
+
+     
+
+    </div> 
+
+
+
+    <div class="myWeek6">
+
+      <h3>Week 6 - Reading week</h3>
+
+    </div> 
+
+
+
+    <div class="myWeek7">
+
+      <h3>Week 7</h3>
+
+      <p>Produce and embed a base map followed by a choropleth</p>
+
+      <div class="chart" id="chart17"></div>
+
+      <p>This choropleth visualises the violence in Venezuela</p>
+      <div class="chart" id="chart18"></div>
+
+
+    </div> 
+
+
+
+    <div class="myWeek8">
+
+      <h3>Week 8</h3>
+
+      <p>Produce two charts that support or refute an argument made at the Festival of Economics.</p>
+
+    </div> 
+
+
+    <div class="myWeek9">
+
+      <h3>Week 9</h3>
+
+      <p>Produce two charts that use advanced analytics</p>
+
+    </div> 
+
+
+  
+    
+
+  </body>
+
+
+
+
+
+
+
+   <!-- this is to style my colab links -->
+   <style>
+    a.textLink {
+      color: rgb(0, 0, 255);
+      background-color: transparent;
+      text-decoration: none;
+    }
+    
+    a:visited {
+      color: rgb(192, 0, 250);
+      background-color: transparent;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color: rgb(255, 0, 0);
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    </style>
+
+
+
+
 
 
 <script>
@@ -169,13 +316,47 @@
     var myChart2 = "chartextreme1.json";
     var myChart3 = "IMFcredit.json";
     var myChart4 = "IMFGDP.json";
+    var myChart5 = "drugdeathsbar_API.json";
+    var myChart6 = "drugdeathsline_API.json";
+    var myChart7 = "briscrime.json";
+    var myChart8 = "chartAIXR.json";
+    var myChart9 = "chartMGXD.json";
+    var myChart10 = "chartYBVI.json";
+    var myChart11 = "chartYBVY.json";
+    var myChart12 = "chartYBYE.json";
+    var myChart13 = "chartYCGN.json";
+    var myChart14 = "chartYCGR.json";
+    var myChart15 = "chartYCPC.json";
+    var myChart16 = "chartZXDY.json";
+    var myChart17 = "SAbasemap.json";
+    var myChart18 = "SAmurdermap.json";
+
+
+
+
+
+
 
  // Embed charts:
  vegaEmbed('#chart1', myChart1);
  vegaEmbed('#chart2', myChart2);
  vegaEmbed('#chart3', myChart3);
  vegaEmbed('#chart4', myChart4);
-    // vegaEmbed('#chart5', myChart5);
+ vegaEmbed('#chart5', myChart5);
+ vegaEmbed('#chart6', myChart6);
+ vegaEmbed('#chart7', myChart7);
+ vegaEmbed('#chart8', myChart8);
+ vegaEmbed('#chart9', myChart9);
+ vegaEmbed('#chart10', myChart10);
+ vegaEmbed('#chart11', myChart11);
+ vegaEmbed('#chart12', myChart12);
+ vegaEmbed('#chart13', myChart13);
+ vegaEmbed('#chart14', myChart14);
+ vegaEmbed('#chart15', myChart15);
+ vegaEmbed('#chart16', myChart16);
+ vegaEmbed('#chart17', myChart17);
+ vegaEmbed('#chart18', myChart18);
+
 </script>
 
 </html>
