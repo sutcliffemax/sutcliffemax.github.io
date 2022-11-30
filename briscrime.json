@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple donut chart with embedded data.",
+  
+    "data": {
+      "values": 
+      
+  [{"Unnamed: 0": 0, "Type": "Public order offences", "Percentage": "15"}, {"Unnamed: 0": 1, "Type": "Violence without injury", "Percentage": "15"}, {"Unnamed: 0": 2, "Type": "Criminal damage", "Percentage": "11"}, {"Unnamed: 0": 3, "Type": "Stalking and harassment", "Percentage": "10"}, {"Unnamed: 0": 4, "Type": "Vehicle offences", "Percentage": "9"}, {"Unnamed: 0": 5, "Type": "Violence with injury", "Percentage": "8"}, {"Unnamed: 0": 6, "Type": "All other theft offences", "Percentage": "7"}, {"Unnamed: 0": 7, "Type": "Shoplifting", "Percentage": "5"}, {"Unnamed: 0": 8, "Type": "Residential burglary", "Percentage": "4"}, {"Unnamed: 0": 9, "Type": "Bicycle theft", "Percentage": "4"}, {"Unnamed: 0": 10, "Type": "Sexual offences", "Percentage": "3"}, {"Unnamed: 0": 11, "Type": "Drug offences", "Percentage": "3"}, {"Unnamed: 0": 12, "Type": "Robbery", "Percentage": "2"}, {"Unnamed: 0": 13, "Type": "Miscellaneous crimes", "Percentage": "2"}, {"Unnamed: 0": 14, "Type": "Non-residential burglary", "Percentage": "1"}, {"Unnamed: 0": 15, "Type": "Theft from the person", "Percentage": "1"}, {"Unnamed: 0": 16, "Type": "Possession of weapons", "Percentage": "1"}]
+    },
+   
+    "title": {
+      "text": "Types of crime in Bristol between June 2020 - July 2021",
+      "subtitle": "Source: ONS",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "mark": {"type": "arc", "innerRadius": 20, "tooltip": true},
+    "encoding": {
+      "theta": {"field": "Percentage", "type": "quantitative", "stack": "normalize"},
+      "color": {"field": "Type", "type": "nominal"}
+     
+    }
+  }
