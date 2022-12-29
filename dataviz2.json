@@ -44,14 +44,15 @@
 
   "encoding": {
 
+  
     "color": {
         "field": "Cost £",
         "type": "quantitative",
-        "title": "Cost £",
+        "title": "Cost (£)",
          "scale":{"scheme":"yellowgreenblue", "domain":[120, 220]}
       },
     "tooltip": [
-      {"field": "properties.ITL121NM", "type": "nominal"},
-      {"field": "Cost £", "type": "quantitative"}]
+      {"field": "properties.ITL121NM", "type": "nominal", "title": "Region"},
+      {"field": "Cost £", "type": "quantitative", "title": "Cost (£)"}]
   }
 }
