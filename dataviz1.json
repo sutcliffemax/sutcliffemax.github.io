@@ -50,6 +50,6 @@
       },
     "tooltip": [
       {"field": "properties.ITL121NM", "type": "nominal", "title": "Region"},
-      {"field": "Cost £", "type": "quantitative"}]
+      {"field": "Cost £", "type": "quantitative", "title": "Cost (£)"}]
   }
 }
