@@ -2,9 +2,10 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "International Territorial Level Map, to change regional hierarchy: replace x in 'ITLx_2021_20m' in URL, and 'ITLx21NM' in tooltip, with 1, 2 or 3.",
     "title": {
-      "text": "Change from January to July",
+      "text": "Percentage Change in the Cost of a Car Service",
+      "subtitle": "January to July",
       "subtitleFontStyle": "italic",
-      "subtitleFontSize": 10,
+      "subtitleFontSize": 13,
       "anchor": "middle",
       "color": "black"
     },
@@ -33,12 +34,12 @@
       "color": {
         "field": "Cost £",
         "type": "quantitative",
-        "title": "Cost (£)",
-        "scale": {"scheme": "yellowgreenblue", "domain": [0, 50]}
+        "title": "Percent",
+        "scale": {"scheme": "yellowgreenblue", "domain": [0, 40]}
       },
       "tooltip": [
         {"field": "properties.ITL121NM", "type": "nominal", "title": "Region"},
-        {"field": "Cost £", "type": "quantitative", "title": "Cost (£)"}
+        {"field": "Cost £", "type": "quantitative", "title": "% change in cost"}
       ]
     }
   }
