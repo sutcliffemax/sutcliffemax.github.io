@@ -8,7 +8,7 @@
     },
   
     "title": {
-      "text": "Extreme demographics: the old-age tsunami",
+      "text": "Extreme demographics!",
       "subtitle":[
         "Share of popluation that is aged 65+",
         "Source: UN. Japan=Red, S Korea=Yellow",
@@ -18,6 +18,8 @@
       "anchor": "start",
       "color": "#000000",
       "subtitleColor":"#000000"},
+
+      "description": "Changing this for the homework",
 
     "config": {
   "background":"#ffffff",

@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/citycluster.csv"
+    },
+    "width": 500,
+    "height": 300,
+    "title": {
+      "text": "Indian Regions by Clustering Cities",
+      "fontSize": 15,
+      "subtitle": "The cities are clustered to form 6 groups. Source: Kaggle",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "color": "black"
+    },
+    "mark": {"type": "point", "filled": true, "size": 100, "opacity": 0.8},
+    "encoding": {
+      "x": {
+        "field": "lng",
+        "title": "Longitude",
+        "type": "quantitative",
+        "scale": {"zero": false},
+        "axis": {"grid": false}
+      },
+      "y": {
+        "field": "lat",
+        "title": "Latitude",
+        "type": "quantitative",
+        "scale": {"zero": false},
+        "axis": {"grid": false}
+      },
+      "color": {
+        "field": "cluster_cities",
+        "title": "Groups",
+        "type": "nominal",
+        "legend": {
+          "labelExpr": "{'0': 'Eastern', '1': 'Central', '2': 'Northern', '3': 'North Eastern','4': 'Southern','5': 'Western','6': 'Western'}[datum.label]"
+        }
+      },
+       "tooltip": [{"field": "city", "type": "nominal", "title": "Indian City"}]
+    }
+  }

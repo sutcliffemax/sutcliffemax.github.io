@@ -242,7 +242,7 @@
     
    
 
-      <p>The website did not prevent me from scraping the data. However, the table had multible pages, so rather than using the URL I created HTML file with the table elements.</p>
+      <p>The website did not prevent me from scraping the data. However, the table had multible pages, so rather than using the read_html() function I created HTML file with the table elements.</p>
     
     </div> 
 
@@ -357,7 +357,7 @@
   
         <p>Supervised: Regression</p>
 
-        <p>Hypotheisis: Run a regression using multiple variables to predict each countries plastic pollution to the ocean. Will be correlated, but not perfectly.</p>
+        <p>Hypotheisis: Run a regression using multiple variables to predict each countries plastic pollution to the ocean. It should be correlated, but not perfectly.</p>
 
 
         <div class="png1">
@@ -367,23 +367,25 @@
 
         <p><a class="textLink" id= "link" href="https://colab.research.google.com/drive/1p45cjIzRLZi4Sr0GMrgqlr_N1Z3u0E8v">Colab</a></p>
 
-        <p>There is some correlation, however there were too many ommitted variables for perfect correlation, such as each countries laws or length of coastline etc.</p>
+        <p>The predicted amount was similar to the test amount, but there were too many ommitted variables for perfect accuracy (e.g. countries laws, access to oceans etc.)</p>
         
         <br>
   
         <p>Unsupervised: K-Means Clustering</p>
   
-        <p>Hypothesis: Clustering using population and plastic-waste generation data, would group countries with small/medium/large population's with small/medium/large plastic-waste generation.</p>
+        <p>Hypothesis: tests whether Indian cities will be clustered into the 6 Indian regions based on their longitudinal and latitudinal bearing.</p>
   
         <div class="chart" id="chart22"></div>
 
-        <p><a class="textLink" id= "link" href="https://colab.research.google.com/drive/1A9GfI1rPg84mECfJP9a2R4VR8Vt-ujYC#scrollTo=ot_BqW1GAYJ5">Colab</a></p>
+        <p><a class="textLink" id= "link" href="https://colab.research.google.com/drive/13xQiA7If-zCYAMJQSWUcZOMr8xz_bGt6#scrollTo=8OtqbVNDNa6S">Colab</a></p>
 
-        <p>The hypothesis is fairly accurate, however the USA is an outlier in the mid population group with far more plastic waste generation than China or India.</p>
+        <p>The regions clustered fairly accurately, especially in the country's corners, however there is some overlap. For the actual regions click <a class="textLink" href="https://www.burningcompass.com/countries/india/india-regions-map.html">here.</a></p>
+      
 
-          <br>
+          <br> 
+  
 
-        <p>Further Machine Learning on Air Pollution below:</p>
+        <p>Further Machine Learning on Air Pollution in India below:</p>
 
        <!--Plot more charts if time-->
         
@@ -404,7 +406,7 @@
 
 
 
-   <!-- this is to style my colab links 
+   <!-- this is to style my hyperlinks  -->
    <style>
     a.textLink {
       color: rgb(0, 0, 255);
@@ -431,7 +433,7 @@
     }
     </style>
 
-  -->
+ 
 
 
 
@@ -461,7 +463,7 @@
     var myChart19 = "CPIH.json";
     var myChart20 = "ExpIQ.json";
     var myChart21 = "bubble.json";
-    var myChart22 = "cluster.json";
+    var myChart22 = "IndianCluster.json";
 
 
 

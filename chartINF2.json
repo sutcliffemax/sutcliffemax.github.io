@@ -3,7 +3,7 @@
 
 
   "title": {
-  "text": "Inflation - comparing three measures",
+  "text": "Different Measures of Inflation",
   "subtitle": "CPI, CPIH and RPI, percentage change, 12-months, 1948-present",
   "subtitleFontStyle":"italic",
   "subtitleFontSize":10,
@@ -11,6 +11,7 @@
   "color": "black"
 },
 
+  "description": "Changing this for the homework",
 
   "width":345,
   "height":300,
