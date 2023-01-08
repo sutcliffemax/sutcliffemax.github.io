@@ -1,0 +1,53 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "title": {
+      "text": "Plastic Waste Generation vs HDI",
+      "subtitle": "2010, Sources: World Bank, Our World in Data, Guardian",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "height": 300,
+    "width": 415,
+    "data": {
+      "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/Bubble2010.csv"
+    },
+    "selection": {
+      "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true},
+      "grid": {"type": "interval", "bind": "scales"}
+    },
+    "mark": {"type": "circle", "opacity": 0.6, "color": "blue"},
+    "encoding": {
+      "x": {
+        "field": "2010",
+        "type": "quantitative",
+        "axis": {
+          "title": "HDI",
+          "grid": false,
+          "tickCount": 6,
+          "labelOverlap": "greedy"
+        }
+      },
+      "y": {
+        "field": "Per capita plastic waste (kg/person/day)",
+        "type": "quantitative",
+        "axis": {"title": "Per capita plastic waste (kg/person/day)", "grid": false,
+        "tickCount": 8}
+      },
+       "size": {
+          "field": "Population", 
+          "type": "quantitative",
+          "title":"Population",
+          "scale": { "range": [10, 2000]},
+          "legend":null},
+  
+       "tooltip":[
+          {"field":"Entity", "type": "ordinal", "title":"Country"},
+          {"field":"Per capita plastic waste (kg/person/day)", "title":"Waste", "format":".3f"},
+          {"field":"2010", "type": "quantitative", "title":"HDI", "format":".3f"},
+          {"field":"Population", "type": "quantitative", "title":"Population", "format":","}
+  
+        ]
+    }
+  }

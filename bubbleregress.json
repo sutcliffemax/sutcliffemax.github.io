@@ -1,0 +1,101 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "title": {
+      "text": "Plastic Waste Generation vs HDI",
+      "subtitle": "2010, Sources: World Bank, Our World in Data, Guardian",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "height": 300,
+    "width": 350,
+    "data": {
+      "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/Bubble2010.csv"
+    },
+    
+
+  "layer": [
+    {
+     "mark": {"type": "circle", "opacity": 0.6, "color": "blue"},
+
+
+       "selection": {
+      "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true},
+      "grid": {"type": "interval", "bind": "scales"}
+    },
+
+     
+
+ "encoding": {
+      "x": {
+        "field": "2010",
+        "type": "quantitative",
+        "axis": {
+          "title": "HDI",
+          "grid": false,
+          "tickCount": 5,
+          "labelOverlap": "greedy"
+        }
+      },
+        "y": {
+        "field": "Per capita plastic waste (kg/person/day)",
+        "type": "quantitative",
+        "axis": {"title": "Per capita plastic waste (kg/person/day)", "grid": false,
+        "tickCount": 8}
+      },
+       "size": {
+          "field": "Population", 
+          "type": "quantitative",
+          "title":"Population",
+          "scale": { "range": [10, 2000]},
+          "legend":null},
+
+           "tooltip":[
+          {"field":"Entity", "type": "ordinal", "title":"Country"},
+          {"field":"Per capita plastic waste (kg/person/day)", "title":"Waste", "format":".3f"},
+          {"field":"2010", "type": "quantitative", "title":"HDI", "format":".3f"},
+          {"field":"Population", "type": "quantitative", "title":"Population", "format":","}
+  
+        ]
+      }
+    },
+    
+    {
+      "data": {
+        "values": [
+          {"y": "0", "x": "0.1766"},
+          {"y": "0.275047", "x": "1"}
+        ]
+      },
+      "mark": {"type": "line", "strokeDash": [3, 1], "color": "#222222"},
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "axis": {"gridColor": "#eeeeee"}
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "axis": {"gridColor": "#eeeeee"}
+        }
+      }
+    },
+
+    {
+      "transform": [
+        {"regression": "Per capita plastic waste (kg/person/day)", "on": "2010", "params": true},
+        {"calculate": "'R²: '+format(datum.rSquared, '.3f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "black",
+        "x": "width",
+        "align": "right",
+        "y": 15
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
+    }
+  ]
+}

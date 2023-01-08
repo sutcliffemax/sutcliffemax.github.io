@@ -5,7 +5,7 @@
       "text": "Death Rate from drug use",
       "subtitle": "Top 6 counties with the highest annual number of deaths attributed to drug use per 100,000 people. Source: IHME",
       "subtitleFontStyle": "italic",
-      "subtitleFontSize": 10,
+      "subtitleFontSize": 12,
       "anchor": "start",
       "color": "black",
       "width": "container"
@@ -31,7 +31,7 @@
   
     "mark": {"type": "bar", "point": true},
     "encoding": {
-      "x": {"field": "Year", "type": "nominal"},
+      "x": {"field": "Year", "type": "nominal", "title":""},
       "y": {"field": "Death Rate", "type": "quantitative"},
       "color": {"field": "Country", "type": "nominal"}
     }

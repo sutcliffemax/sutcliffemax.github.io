@@ -1,6 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A simple donut chart with embedded data.",
+    
+    "height": 300,
+  "width": 250,
   
     "data": {
       "values": 

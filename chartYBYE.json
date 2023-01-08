@@ -1,0 +1,27 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+   
+    "data": {
+     
+      "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/data_ShortONS-YBYE.json",
+      
+      "format": {"type": "json", "property": "years"}
+    },
+   "title": {
+        "text": "Unemployed over 24 months: UK",    "subtitle": "Aged 18-24 from 1992-2021, Source: ONS",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"
+      },
+    "width": 180,
+    "height": 180,
+    "mark": {
+      "type": "line",
+      "color": "rgb(0,47,167"},
+    "encoding": {
+      "x": {"field": "date", "type": "temporal","axis": {"grid": false}, "title": ""},
+
+      "y": {"field": "value", "type": "quantitative","axis": {"grid": false}, "title": "Number of people (000s)"}
+    }
+  }

@@ -9,13 +9,13 @@
 
 /* Set the background color for my page: */
 body{
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(10,10,10);
  
 }
 
  /* Set scrollbar to be thinner and change colour */ 
  body::-webkit-scrollbar {
-    width: 0.5rem;
+    width: 0.8rem;
   }
   
   body::-webkit-scrollbar-track {
@@ -27,37 +27,56 @@ body{
   }
 
 /* Choose the appearance of the tags, h1, h3 and p: */
-h1, h3, p{
-    color:rgb(17, 17, 17);
-    font-family: 'Roboto', sans-serif;
+
+h1{ font-family: 'Jost', monospace;
+  
+  font-size: 60px;
+  text-align: center}
+
+ h2{font-family: 'Jost', sans-serif, monospace;
+    color:rgb(255, 255, 255);
+    text-align: center;
+    font-size: 30px
+}
+
+h3, p{font-family: 'Jost', sans-serif, monospace;
+    color:rgb(255, 255, 255);
     text-align: center;
 }
 
 
-    
-.myWeek1{
-    margin: auto;
-    margin-top: 1%;
-    margin-bottom: 0%;
-    max-width: 800px;
-    background-color: rgb(192, 220, 233);
-    border-width: 5px;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: rgb(8, 36, 92);
 
+.myWeek{
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  max-width: 1000px;
+  background-color: rgb(0,0,0);
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 10px;
+}
+  
+.myWeek1{
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  max-width: 1000px;
+  background-color: rgb(0,0,0);
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 10px;
 }
 
 .myWeek2{
-    margin: auto;
-    margin-top: 1%;
-    margin-bottom: 0%;
-    max-width: 800px;
-    background-color: rgb(192, 220, 233);
-    border-width: 5px;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: rgb(8, 36, 92);
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  max-width: 1000px;
+  background-color: rgb(0,0,0);
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 10px;
 
 }
 
@@ -66,12 +85,11 @@ h1, h3, p{
   margin: auto;
   margin-top: 1%;
   margin-bottom: 0%;
-  max-width: 800px;
-  background-color: rgb(192, 220, 233);
+  max-width: 1000px;
+  background-color: rgb(0,0,0);
   border-width: 5px;
   border-style: solid;
   border-radius: 10px;
-  border-color: rgb(8, 36, 92);
 
 }
 
@@ -79,12 +97,11 @@ h1, h3, p{
   margin: auto;
   margin-top: 1%;
   margin-bottom: 0%;
-  max-width: 800px;
-  background-color: rgb(192, 220, 233);
+  max-width: 1000px;
+  background-color: rgb(0,0,0);
   border-width: 5px;
   border-style: solid;
   border-radius: 10px;
-  border-color: rgb(8, 36, 92);
 
 }
 
@@ -92,12 +109,11 @@ h1, h3, p{
   margin: auto;
   margin-top: 1%;
   margin-bottom: 0%;
-  max-width: 800px;
-  background-color: rgb(192, 220, 233);
+  max-width: 1000px;
+  background-color: rgb(0,0,0);
   border-width: 5px;
   border-style: solid;
   border-radius: 10px;
-  border-color: rgb(8, 36, 92);
 
 }
 
@@ -105,12 +121,11 @@ h1, h3, p{
   margin: auto;
   margin-top: 1%;
   margin-bottom: 0%;
-  max-width: 800px;
-  background-color: rgb(192, 220, 233);
+  max-width: 1000px;
+  background-color: rgb(0,0,0);
   border-width: 5px;
   border-style: solid;
   border-radius: 10px;
-  border-color: rgb(8, 36, 92);
 
 }
 
@@ -118,12 +133,12 @@ h1, h3, p{
   margin: auto;
   margin-top: 1%;
   margin-bottom: 0%;
-  max-width: 800px;
-  background-color: rgb(192, 220, 233);
+  max-width: 1000px;
+  background-color: rgb(0,0,0);
   border-width: 5px;
   border-style: solid;
   border-radius: 10px;
-  border-color: rgb(8, 36, 92);
+
 
 }
 
@@ -131,25 +146,22 @@ h1, h3, p{
   margin: auto;
   margin-top: 1%;
   margin-bottom: 0%;
-  max-width: 800px;
-  background-color: rgb(192, 220, 233);
+  max-width: 1000px;
+  background-color: rgb(0,0,0);
   border-width: 5px;
   border-style: solid;
   border-radius: 10px;
-  border-color: rgb(8, 36, 92);
-
 }
 
 .myWeek9{
   margin: auto;
   margin-top: 1%;
   margin-bottom: 0%;
-  max-width: 800px;
-  background-color: rgb(192, 220, 233);
+  max-width: 1000px;
+  background-color: rgb(0,0,0);
   border-width: 5px;
   border-style: solid;
   border-radius: 10px;
-  border-color: rgb(8, 36, 92);
 
 }
 
@@ -157,16 +169,28 @@ h1, h3, p{
   margin: auto;
   margin-top: 1%;
   margin-bottom: 0%;
-  max-width: 800px;
-  background-color: rgb(192, 220, 233);
+  max-width: 1000px;
+  background-color: rgb(0,0,0);
   border-width: 5px;
   border-style: solid;
   border-radius: 10px;
-  border-color: rgb(8, 36, 92);
 
 }
 
 
+/* Set the apperance of the class, image */
+
+.png1{
+  display:block;
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: rgb(8,36,92);
+}  
 
 
 /* Set the apperance of the class, chart */
@@ -186,13 +210,13 @@ h1, h3, p{
 
 #chart5{
   width: fit-content;
-  margin-left: 1%;
+  margin: 0 auto;
   
 }
 
 #chart6{
   width: fit-content;
-  margin-left: 1%;
+  margin: 0 auto;
   
 }
 
@@ -201,8 +225,61 @@ h1, h3, p{
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  width: 100%;
+  width: 80%;
+  background-color: rgb(255, 255, 255);
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: rgb(8,36,92);
+  margin: 0 auto;
+
 }
+
+/*For the buttons*/
+
+/* BUTTONS */
+
+a{
+  display: block;
+  text-align: center;
+  width: 10%;
+  margin:10px;
+  margin: auto;
+
+}  
+
+
+.center-text {
+  text-align: center;
+}
+
+a.center-text {
+  display: block;
+}
+
+#link{
+  background-color: rgb(37, 37, 37, 0.5);
+  padding:10px;
+  border:2px;
+  border-color:rgb(80, 80, 80);
+  border-style: solid;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight:700;
+  color:white;
+  text-decoration: none;
+}
+  
+
+#link:hover{
+
+  background-color: rgba(37, 37, 37);
+  border:2px;
+  border-color:rgb(231, 231, 231);
+  border-style: solid;
+  
+}
+
 
 
 /* All styling for my side navigation bar - hands off */ 
@@ -212,16 +289,15 @@ h1, h3, p{
     padding: 0;
     width: 100px;
     height: 100%;
-    background: linear-gradient(#000000, #5c5c5c) no-repeat center fixed;
+    background: rgb(10,10,10);
     transition: 0.5s;
     overflow: hidden;
-    color: #FEFEFE;
     font-family: 'Epilogue', sans-serif;
   }
   
   .navigation:hover,
   .navigation.active {
-    width: 300px;
+    width: 200px;
   }
   
   .navigation ul {
@@ -240,7 +316,7 @@ h1, h3, p{
   .navigation ul li:hover {
     background: #181818;
     transition: 0.5s ease;
-    color: #ff0000
+    color: #1900ff
   }
   
   .navigation ul li a {
@@ -252,7 +328,7 @@ h1, h3, p{
   }
   
   .navigation ul li a:hover {
-    color: #5643fd;
+    color: #1900ff;
   }
   
   .navigation ul li a .icon {
@@ -284,13 +360,8 @@ h1, h3, p{
     right: 0;
     width: 60px;
     height: 60px;
-    background: linear-gradient(#282828, #181818) no-repeat center fixed;
+    background: rgb(10,10,10);
     cursor: pointer;
-  }
-  
-  .toggle.active {
-    background: linear-gradient(#282828, #181818) no-repeat center fixed;
-    transition: 0.5s ease;
   }
   
   .toggle:before {
@@ -317,7 +388,8 @@ h1, h3, p{
   
   
   
-  /* Media queries that allow both a stable mobile and desktop version of my website 
+  /*
+Media queries that allow both a stable mobile and desktop version of my website */
 
   @media (max-width: 700px) {
     .navigation {
@@ -352,4 +424,117 @@ h1, h3, p{
     margin-left: 300px;
     margin-right: 50px;
     padding: 1px 16px;
-  } /*
+  } 
+
+  /*loading screeeeen*/
+
+
+
+  @import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700|Roboto:300,400,500,700");
+ body {
+	 margin: 0;
+	 padding: 0;
+	 overflow: hidden;
+}
+ body.loaded {
+	 overflow-y: auto;
+}
+ .overlay {
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 z-index: 100000000;
+}
+ .overlay .overlayDoor:before, .overlay .overlayDoor:after {
+	 content: "";
+	 position: absolute;
+	 width: 50%;
+	 height: 100%;
+	 background: #111;
+	 transition: 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+	 transition-delay: 0.8s;
+}
+ .overlay .overlayDoor:before {
+	 left: 0;
+}
+ .overlay .overlayDoor:after {
+	 right: 0;
+}
+ .overlay.loaded .overlayDoor:before {
+	 left: -50%;
+}
+ .overlay.loaded .overlayDoor:after {
+	 right: -50%;
+}
+ .overlay.loaded .overlayContent {
+	 opacity: 0;
+	 margin-top: -15px;
+}
+ .overlay .overlayContent {
+	 position: relative;
+	 width: 100%;
+	 height: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 flex-direction: column;
+	 transition: 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+}
+ .overlay .overlayContent .skip {
+	 display: block;
+	 width: 130px;
+	 text-align: center;
+	 margin: 50px auto 0;
+	 cursor: pointer;
+	 color: #fff;
+	 font-family: "Nunito";
+	 font-weight: 700;
+	 padding: 12px 0;
+	 border: 2px solid #fff;
+	 border-radius: 3px;
+	 transition: 0.2s ease;
+}
+ .overlay .overlayContent .skip:hover {
+	 background: #ddd;
+	 color: #444;
+	 border-color: #ddd;
+}
+ .loader {
+	 width: 128px;
+	 height: 128px;
+	 border: 3px solid #fff;
+	 border-bottom: 3px solid transparent;
+	 border-radius: 50%;
+	 position: relative;
+	 animation: spin 1s linear infinite;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .loader .inner {
+	 width: 64px;
+	 height: 64px;
+	 border: 3px solid transparent;
+	 border-top: 3px solid #fff;
+	 border-radius: 50%;
+	 animation: spinInner 1s linear infinite;
+}
+ @keyframes spin {
+	 0% {
+		 transform: rotate(0deg);
+	}
+	 100% {
+		 transform: rotate(360deg);
+	}
+}
+ @keyframes spinInner {
+	 0% {
+		 transform: rotate(0deg);
+	}
+	 100% {
+		 transform: rotate(-720deg);
+	}
+}
+

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/proj.csv"
+  },
+  "title": {
+    "text": "Plastic Waste Generation is set to triple by 2060",
+    "color": "#000000",
+    "fontSize": 16,
+    "subtitlePadding": 5,
+    "fontWeight": 600,
+    "anchor": "start",
+    "subtitle": "Currently only 9% of Plastic Waste is Recycled Globally, Source: OEDC"
+  },
+  "width": 380,
+  "height": 250,
+  "transform": [
+    {"calculate": "year(datum.Year)", "as": "year"},
+    {"filter": "datum.year>=minYear"},
+    {"filter": "datum.year<=maxYear"}
+  ],
+  "params": [
+    {
+      "name": "minYear",
+      "value": 2019,
+      "bind": {
+        "input": "range",
+        "min": 2019,
+        "max": 2050,
+        "step": 1,
+        "name": "Start year:"
+      }
+    },
+    {
+      "name": "maxYear",
+      "value": 2060,
+      "bind": {
+        "input": "range",
+        "min": 2020,
+        "max": 2060,
+        "step": 1,
+        "name": "End year:"
+      }
+    }
+  ],
+  "mark": "area",
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "title": null},
+    "y": {"field": "Value", "type": "quantitative", "title": "Million Tonnes"},
+    "color": {
+      "field": "Plastics end of life fates",
+      "scale": {"scheme": "tableau10"},
+      "legend": {"orient": "top-left", "title": null}
+    },
+    "tooltip": [
+      {"field": "Plastics end of life fates"},
+      {"field": "Value", "format": ".2f", "title": "Value (million tonnes)"},
+      {"field": "Year", "formatType": "year"}
+    ]
+  }
+}

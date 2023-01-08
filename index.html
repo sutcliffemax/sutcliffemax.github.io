@@ -17,56 +17,182 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    
+    <!-- to put the background behind the buttons-->
+    <style>
+      
+      #tsparticles{
+        position: relative;
+        z-index: -1;
+      }
+
+
+      @media (max-width: 767px){
+        h1{
+          font-size: 50px;
+        }
+
+        a{
+          width: 200px;
+        }
+      }
+
+      @media (max-width: 500px){
+        h1{
+          font-size: 30px;
+        }
+      }
+      
+    </style>
+
+<script src="https://kit.fontawesome.com/6782582340.js" crossorigin="anonymous"></script>
+
+
+    
 </head>
 
-
 <body>
+
+  <div class="overlay">
+    <div class="overlayDoor"></div>
+    <div class="overlayContent">
+      <div class="loader">
+        <div class="inner"></div>
+      </div>
+      <!-- <div class="skip">SKIP</div> -->
+    </div>
+  </div>
+
+
     <div class="Homepage">
         
-        <br>
         <br> 
         <br> 
 
-        <h1>Data Science 2022 - Max Sutcliffe</h1>
+        <h1><span style="color:rgb(77, 77, 77)">Data</span><span style="color:rgb(144, 144, 144)">Science</span></h1>
+   
 
-        <br>
-        
-        <h1>Homepage</h1>
-        <!-- <span class="icon"><i class="fas fa-home"></i></span> work out symbol -->
+        <a href="portfolio.html" id="link1">
+            <span class="icon"><i class="fas fa-folder-open"></i></span>
+            <span class="title">Portfolio</span>
+          </a>
 
-        <br>
-        <br> 
-        <br> 
-
-        <a href="portfolio.html" id="link1">My Portfolio</a>
 
         <br>
         <br> 
-        <br> 
+    
       
-        <a href="project.html" id="link2">My Project</a>
+        <a href="project.html" id="link2">
+            <span class="icon"><i class="fas fa-globe"></i></span>
+            <span class="title">Project</span>
+          </a>
 
         <br>
         <br> 
-        <br> 
+  
 
-        <a href="https://github.com/sutcliffemax" id="link3">GitHub</a>
+        <a href="https://github.com/sutcliffemax/sutcliffemax.github.io" id="link3">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span class="title">Github</span>
+          </a>
+
+          <br>
+          <br> 
+          <br> 
+
+          <h2>Max Sutcliffe</h2>
 
     </div> 
+
+    
+    <!--this is for my reactive background-->
+     <!-- tsParticles div, not required, but it's recommended -->
+
+     <div id="tsparticles"></div>
+    
+     <!-- The bundle file contains all the necessary scripts for the slim version, instead of manually including them all -->
+     <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"></script>
+   
+
+     <script type="text/javascript">
+      
+
+       const options = {
+         background: {
+           color: "#000", // the canvas background color
+         },
+         interactivity: {
+           events: {
+             onClick: {
+               // this handles the mouse click event
+               enable: true,
+               mode: "push", // this adds particles
+             },
+             onHover: {
+               // this handles the mouse hover event
+               enable: true,
+               mode: "repulse", // this make particles move away from the mouse
+             },
+           },
+           modes: {
+             push: {
+               quantity: 6, // number of particles to add
+             },
+             repulse: {
+               distance: 100, // the distance of the particles from the mouse
+             },
+           },
+         },
+         particles: {
+           links: {
+             enable: true, // this enables links between particles
+             opacity: 0.3,
+             distance: 200,
+           },
+           move: {
+             enable: true, // this makes particles move
+             speed: { min: 1, max: 3 }, // this is the speed of the particles
+           },
+           opacity: {
+             value: { min: 0.3, max: 0.7 }, // this sets the opacity of the particles
+           },
+           size: {
+             value: { min: 1, max: 3 }, // this sets the size of the particles
+           },
+         },
+       };
+ 
+       // tsParticles.load has two parameters, the first one is the id of the container, the second one is an object with the options
+       tsParticles.load("tsparticles", options);
+    
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <script>
+      $(document).ready(function() {
+	// Users can skip the loading process if they want.
+	$('.skip').click(function() {
+		$('.overlay, body').addClass('loaded');
+	})
+	
+	// Will wait for everything on the page to load.
+	$(window).bind('load', function() {
+		$('.overlay, body').addClass('loaded');
+		setTimeout(function() {
+			$('.overlay').css({'display':'none'})
+		}, 2000)
+	});
+	
+	// Will remove overlay after 1min for users cannnot load properly.
+	setTimeout(function() {
+		$('.overlay, body').addClass('loaded');
+	}, 60000);
+})
+    </script>
+
+
 
 </body>
 
 
-
-<div class="center">
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-  </div>

@@ -1,0 +1,96 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "hconcat": [ {
+    
+    "height": 250, 
+    "width": 250, 
+    
+    "title": {
+      "text": "Philippines is Surging ahead!",
+      "subtitle": "Countries contributing most to ocean plastic 2021, Source: WorldPop.",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+      
+    },
+    "data": {
+      "values": [{"Country": "Philippines", "MPW released into oceans 2021": 356371.0, "Total MPW created 2021": 4025300.0, "Remaining MPW": 3668929.0}, {"Country": "India", "MPW released into oceans 2021": 126513.0, "Total MPW created 2021": 12994100.0, "Remaining MPW": 12867587.0}, {"Country": "Malaysia", "MPW released into oceans 2021": 73098.0, "Total MPW created 2021": 814454.0, "Remaining MPW": 741356.0}, {"Country": "China", "MPW released into oceans 2021": 70707.0, "Total MPW created 2021": 12272200.0, "Remaining MPW": 12201493.0}, {"Country": "Indonesia", "MPW released into oceans 2021": 56333.0, "Total MPW created 2021": 824234.0, "Remaining MPW": 767901.0}, {"Country": "Brazil", "MPW released into oceans 2021": 37799.0, "Total MPW created 2021": 3296700.0, "Remaining MPW": 3258901.0}, {"Country": "Vietnam", "MPW released into oceans 2021": 28221.0, "Total MPW created 2021": 1112790.0, "Remaining MPW": 1084569.0}, {"Country": "Bangladesh", "MPW released into oceans 2021": 24640.0, "Total MPW created 2021": 1021990.0, "Remaining MPW": 997350.0}, {"Country": "Thailand", "MPW released into oceans 2021": 22806.0, "Total MPW created 2021": 1361690.0, "Remaining MPW": 1338884.0}, {"Country": "Nigeria", "MPW released into oceans 2021": 18640.0, "Total MPW created 2021": 1948950.0, "Remaining MPW": 1930310.0}]
+    },
+  
+     "selection": {
+       
+        "grid": {"type": "interval", "bind": "scales"}
+      },
+      "mark": {"type": "bar", "point": true},
+    
+    "encoding": {
+      "x": {"field": "Country", "type": "nominal", "title":"", "sort": "y"},
+  
+   
+      "y": {"field": "MPW released into oceans 2021", "type": "quantitative", "title": "Plastic Dumped in the Ocean in 2021 (tonnes)"},
+  
+      "tooltip": [
+       
+         {
+          "field": "Country",
+          "type": "nominal",
+          "title": "Country"
+         
+        },
+         {
+          "field": "MPW released into oceans 2021",
+          "type": "quantitative",
+          "title": "tonnes/year",
+          "format": ".0f"
+        }
+      ]
+     
+    }
+    },
+   
+    { "width": 250,
+    "height": 250
+  ,
+    "title": {
+      "text": "Plastic Mass on the Ocean Surface = 70 000 killer whales",
+      "subtitle": "S/N Atlantic, S/N Pacific, Indian, Mediterranean. Source: Eriksen et al. (2014) ",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+      
+    },
+    "data": {
+      "values": [{"Size class": "0.33\u20131.00 mm", "Sea": "NP", "Weight": 21.0}, {"Size class": "1.01\u20134.75 mm", "Sea": "NP", "Weight": 100.0}, {"Size class": "4.76\u2013200 mm", "Sea": "NP", "Weight": 109.0}, {"Size class": ".200 mm", "Sea": "NP", "Weight": 734.0}, {"Size class": "0.33\u20131.00 mm", "Sea": "NA", "Weight": 10.4}, {"Size class": "1.01\u20134.75 mm", "Sea": "NA", "Weight": 42.1}, {"Size class": "4.76\u2013200 mm", "Sea": "NA", "Weight": 45.2}, {"Size class": ".200 mm", "Sea": "NA", "Weight": 467.0}, {"Size class": "0.33\u20131.00 mm", "Sea": "SP", "Weight": 6.5}, {"Size class": "1.01\u20134.75 mm", "Sea": "SP", "Weight": 16.9}, {"Size class": "4.76\u2013200 mm", "Sea": "SP", "Weight": 17.8}, {"Size class": ".200 mm", "Sea": "SP", "Weight": 169.0}, {"Size class": "0.33\u20131.00 mm", "Sea": "SA", "Weight": 3.7}, {"Size class": "1.01\u20134.75 mm", "Sea": "SA", "Weight": 11.7}, {"Size class": "4.76\u2013200 mm", "Sea": "SA", "Weight": 12.4}, {"Size class": ".200 mm", "Sea": "SA", "Weight": 100.0}, {"Size class": "0.33\u20131.00 mm", "Sea": "IO", "Weight": 14.6}, {"Size class": "1.01\u20134.75 mm", "Sea": "IO", "Weight": 60.1}, {"Size class": "4.76\u2013200 mm", "Sea": "IO", "Weight": 64.6}, {"Size class": ".200 mm", "Sea": "IO", "Weight": 452.0}, {"Size class": "0.33\u20131.00 mm", "Sea": "MED", "Weight": 14.1}, {"Size class": "1.01\u20134.75 mm", "Sea": "MED", "Weight": 53.8}, {"Size class": "4.76\u2013200 mm", "Sea": "MED", "Weight": 57.6}, {"Size class": ".200 mm", "Sea": "MED", "Weight": 106.0}, {"Size class": "0.33\u20131.00 mm", "Sea": "Total", "Weight": 70.4}, {"Size class": "1.01\u20134.75 mm", "Sea": "Total", "Weight": 285.0}, {"Size class": "4.76\u2013200 mm", "Sea": "Total", "Weight": 306.0}, {"Size class": ".200 mm", "Sea": "Total", "Weight": 2028.0}]
+    },
+       "selection": {
+       
+        "grid": {"type": "interval", "bind": "scales"}
+      },
+      
+    "mark": {"type": "bar", "point": true},
+    "encoding": {
+      "x": {"field": "Sea", "type": "nominal", "sort": "y", "title":"", "axis":{ "labelOverlap": "greedy"}},
+      "y": {"field": "Weight", "type": "quantitative", "sort": "y", "title":"Ocean Surface Plastic (Thousand Tonnes)"},
+      "color": {"field": "Size class", "type": "nominal", "scale":{"scheme":"darkgreen"}},
+  
+         "tooltip": [
+         {
+          "field": "Sea",
+          "type": "nominal"
+        },
+         {
+          "field": "Weight",
+          "type": "quantitative",
+          "title": "000 tonnes a year",
+          "format": ".0f"
+        },
+        {
+          "field": "Size class",
+          "type": "nominal"
+        }
+      ]
+    }}]
+  }

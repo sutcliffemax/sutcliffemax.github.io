@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/countries_cluster.csv"
+    },
+    "width": 400,
+    "height": 300,
+    "title": {
+      "text": "Countries by Plastic Waste Generation and Population",
+      "fontSize": 15,
+      "subtitle": "The countries are clustered to form 3 groups. Use the interactive Axis. Source: OWID",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 12,
+      "color": "black"
+    },
+    "mark": {"type": "point", "filled": true, "size": 100, "opacity": 0.8},
+  
+   "selection": {
+          "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true},
+          "grid": {"type": "interval", "bind": "scales"}
+        },
+    "encoding": {
+      "x": {
+        "field": "pop2023",
+        "title": "Population",
+        "type": "quantitative",
+        "scale": {"zero": false},
+        "axis": {"grid": false}
+      },
+      "y": {
+        "field": "pWaste2016",
+        "title": "Plastic Waste Generation",
+        "type": "quantitative",
+        "scale": {"zero": false},
+        "axis": {"grid": false}
+      },
+      "tooltip": [
+        {"field": "country", "type": "nominal", "title": "Country"},
+        {"field": "pWaste2016", "type": "quantitative", "title": "Plastic Waste Generation (tonnes)"},
+        {"field": "pop2023", "type": "quantitative", "title": "Population"}
+      ],
+      "color": {
+        "field": "cluster_countries",
+        "title": "Groups",
+        "type": "nominal"
+        
+      }
+    }
+  }

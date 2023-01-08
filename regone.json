@@ -1,0 +1,178 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "hconcat": [ {
+ 
+ 
+  "data": {
+    "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/combi.csv"
+  },
+  "height": 250,
+  "width": 280,
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "filled": false,
+        "color": "darkslateblue",
+        "opacity": 0.7
+      },
+      
+      "title": {
+        "text": "Mismanaged Plastic Waste on GDP/Capita",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black"
+      },
+      "encoding": {
+        "x": {
+          "field": "GDP per capita (output, multiple price benchmarks)",
+          "scale": {"domain": [0, 120000]},
+          "title": "GDP per capita ($US)",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Mismanaged plastic waste per capita (kg per year)",
+          "scale": {"domain": [0, 70]},
+          "title": "Plastic Pollution per capita (kg/year)",
+          "type": "quantitative"
+        },
+        
+        "tooltip": [
+          {
+            "field": "Mismanaged plastic waste per capita (kg per year)",
+            "title": "Mismanaged plastic (kg/year/capita)",
+            "format": ".2f"
+          },
+          {
+            "field": "GDP per capita (output, multiple price benchmarks)",
+            "title": "GDP per capita",
+            "format": ".2f"
+          },
+          {"field": "Entity"}
+        ]
+      }
+    },
+    {
+      "data": {"values": [{"y": "14.217", "x": "0"}, {"y": "0", "x": "60922"}]},
+      "mark": {"type": "line", "strokeDash": [3, 1], "color": "#222222"},
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "axis": {"gridColor": "#eeeeee"}
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "axis": {"gridColor": "#eeeeee"}
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "Mismanaged plastic waste per capita (kg per year)",
+          "on": "GDP per capita (output, multiple price benchmarks)",
+          "params": true
+        },
+        {"calculate": "'R²: '+format(datum.rSquared, '.3f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "black",
+        "x": "width",
+        "align": "right",
+        "y": -10
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
+    }
+  ]
+}, {
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/combi2.csv"
+  },
+   "height": 250,
+  "width": 280,
+
+  
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "filled": false,
+        "color": "darkslateblue",
+        "opacity": 0.7
+      },
+
+      "title": {
+        "text": "Plastic Waste Generation on GDP/Capita",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black"
+      },
+      "encoding": {
+        "x": {
+          "field": "GDP per capita (output, multiple price benchmarks)",
+          "scale": {"domain": [0, 140000]},
+          "title": "GDP per capita ($US)",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Per capita plastic waste (kg/person/day)",
+          "scale": {"domain": [0, 0.7]},
+          "title": "Plastic Waste Generation (kg/person/day)",
+          "type": "quantitative"
+        },
+        "tooltip": [
+      {"field": "Per capita plastic waste (kg/person/day)", "title": "Plastic waste generated (kg/year/capita)", "format":".3f"},
+    
+      {"field": "GDP per capita (output, multiple price benchmarks)", "title": "GDP per capita", "format":".2f"},
+      {"field": "Entity"}
+    ]
+      }
+    },
+    {
+      "data": {
+        "values": [{"y": "0.133", "x": "0"}, {"y": "0.422", "x": "140000"}]
+      },
+      "mark": {"type": "line", "strokeDash": [3, 1], "color": "#222222"},
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "axis": {"gridColor": "#eeeeee"}
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "axis": {"gridColor": "#eeeeee"}
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "Per capita plastic waste (kg/person/day)",
+          "on": "GDP per capita (output, multiple price benchmarks)",
+          "params": true
+        },
+        {"calculate": "'R²: '+format(datum.rSquared, '.3f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "black",
+        "x": "width",
+        "align": "right",
+        "y": -10
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
+    }
+  ]
+ 
+ 
+ }]
+}

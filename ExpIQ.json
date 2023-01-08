@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/ExpIQ.csv",
+      "format":{"type":"csv"}
+    },
+   
+    "transform": [{"filter": {"field": "Type", "oneOf": ["Housing, water, electricity",
+       "Food and non-alcoholic drinks"]}}],
+    "title": {
+          "text": "Expenditure by Income group",
+          "subtitle": ["Where quintile 1 is the poorest 20% and quintile 5 is the richest 20%",
+           "Source: ONS",
+           ""],
+          "subtitleFontStyle":"italic",
+          "subtitleFontSize":10,
+          "anchor": "start",
+          "color": "black"},
+    "width": {"step": 50},
+    "height": 295,
+    "mark": "bar",
+    "encoding": {
+      "column": {"field": "Type", "sort": ["Housing, water, electricity",
+       "Food and non-alcoholic drinks"
+       ], "type": "nominal", "spacing": 30, "title": null},
+  
+      "y": {
+        "aggregate": "sum",
+        "field": "Value",
+        "title": "Share of expenditure (%)",
+        "scale": {"domain": [0, 30]}
+        
+      },
+
+      "x": {
+        "field": "Income Quintile", 
+        "sort": ["1", "2", "3", "4", "5"],
+        "axis": {"title": "", "labelColor": "white", "ticks": false}
+      },
+      "color": {
+        "field": "Income Quintile",
+        "title": "Income Quintile",
+        "sort": ["1", "2", "3", "4", "5"],
+
+        "legend": {"orient": "bottom", "columns":5}
+      }
+    },
+    "config": {"view": {"stroke": "transparent"}, "axis": {"domainWidth": 1}}
+  }
