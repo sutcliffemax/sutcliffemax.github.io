@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>D3 Choropleth</title>
+    <style>
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      select {
+        margin-bottom: 40px;
+        height: 32px;
+        border: 1px solid gray;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      .tooltip {
+        opacity: 0;
+        position: absolute;
+        background-color: white;
+        color: black;
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid gray;
+        pointer-events: none;
+      }
+
+      .tooltip span {
+        font-weight: bold;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    
+    <div class="container">
+      <select name="data" id="dataSource">
+        <option value="1">
+          Mismanaged plastic waste per capita (kg per year)
+        </option>
+        <option value="2">
+          Mismanaged plastic waste to ocean per capita (kg per year)
+        </option>
+        <option value="3">Per capita plastic waste (kg/person/day)</option>
+        <option value="4">Share of global plastics emitted to ocean</option>
+        <option value="5">Share of global mismanaged plastic waste</option>
+      </select>
+      <div id="chart"></div>
+    </div>
+    <script>
+      const margins = {
+        top: 20,
+        right: 20,
+        bottom: 20,
+        left: 20,
+      };
+
+      const height = 600 - margins.top - margins.bottom;
+      const width = 960 - margins.left - margins.right;
+
+      const svg = d3
+        .select("#chart")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", `translate(${margins.left}, ${margins.top})`);
+
+      const projection = d3
+        .geoMercator()
+        .scale(100)
+        .translate([width / 2, height / 1.5]);
+      const path = d3.geoPath().projection(projection);
+
+      const tooltip = d3.select("body").append("div").attr("class", "tooltip");
+
+      Promise.all([
+        d3.json("data/countries.json"),
+        d3.csv("data/plastic-pollution (10).csv"),
+        d3.csv("data/plastic-pollution (11).csv"),
+        d3.csv("data/plastic-pollution (12).csv"),
+        d3.csv("data/plastic-pollution (13).csv"),
+        d3.csv("data/plastic-pollution (14).csv"),
+      ]).then(
+        ([
+          topojson,
+          dataSourceOne,
+          dataSourceTwo,
+          dataSourceThree,
+          dataSourceFour,
+          dataSourceFive,
+        ]) => {
+          const data = {
+            1: dataSourceOne,
+            2: dataSourceTwo,
+            3: dataSourceThree,
+            4: dataSourceFour,
+            5: dataSourceFive,
+          };
+
+          const dataValue = {
+            1: "Mismanaged plastic waste to ocean per capita (kg per year)",
+            2: "Mismanaged plastic waste per capita (kg per year)",
+            3: "Per capita plastic waste (kg/person/day)",
+            4: "Share of global plastics emitted to ocean",
+            5: "Share of global mismanaged plastic waste",
+          };
+
+          let selectedData = "1";
+
+          data[selectedData] = data[selectedData].filter(d=>{return d['Code']!=''})
+
+          let range = d3.extent(
+            data[selectedData],
+            (d) => +d[dataValue[selectedData]]
+          );
+
+
+          const colorScale = d3
+            .scaleLinear()
+            .domain(range)
+            .range(["#FAD49E", "#9A221D"]);
+
+          let legendData = [
+            range[0],
+            (range[1] - range[0]) / 6,
+            (range[1] - range[0]) / 4,
+            (range[1] - range[0]) / 2,
+            range[1],
+          ];
+
+          svg
+            .append("g")
+            .attr("class", "countries")
+            .selectAll("path")
+            .data(topojson.features)
+            .enter()
+            .append("path")
+            .attr("d", path)
+            .attr("stroke", "black")
+            .attr("stroke-width", 0.5)
+            .attr("fill", (d) => {
+              const country = data[selectedData].find(
+                (c) => c["Code"] === d.properties.ISO_A3
+              );
+              return country
+                ? colorScale(country[dataValue[selectedData]])
+                : "#ccc";
+            })
+            .style("cursor", "pointer")
+            .on("mousemove", function (e, d) {
+              d3.select(this).attr("opacity", 0.6);
+              const country = data[selectedData].find(
+                (c) => c["Code"] === d.properties.ISO_A3
+              );
+
+              tooltip.transition().duration(200).style("opacity", 0.9);
+
+              tooltip
+                .html(
+                  `Country: <span>${d.properties.ADMIN}</span> <br> ${
+                    dataValue[selectedData]
+                  }: <span>${
+                    country ? country[dataValue[selectedData]] : "No data"
+                  }</span>`
+                )
+                .style("left", event.pageX + 10 + "px")
+                .style("top", event.pageY + 10 + "px");
+            })
+            .on("mouseout", function (d) {
+              d3.select(this).attr("opacity", 1);
+              tooltip.transition().duration(200).style("opacity", 0);
+            });
+
+          //map title
+          svg
+            .append("text")
+            .attr("x", width / 2)
+            .attr("y", 0)
+            .attr("font-size", 24)
+            .attr("text-anchor", "middle")
+            .attr("font-weight", "bold")
+            .text("Plastic Pollution by Country");
+
+          //subtitles
+          svg
+            .append("text")
+            .attr("x", width / 2)
+            .attr("y", 20)
+            .attr("font-size", 16)
+            .attr("text-anchor", "middle")
+            .attr("fill", "gray")
+            .attr("font-weight", "bold")
+            .text("Sources between 2010 - 2019");
+
+          // legend
+          const legend = svg
+            .append("g")
+            .attr("class", "legend")
+            .attr(
+              "transform",
+              `translate(${width / 2 - (40 * legendData.length) / 2}, ${
+                margins.top + 16
+              })`
+            );
+
+          legend
+            .selectAll("rect")
+            .data(legendData)
+            .enter()
+            .append("rect")
+            .attr("width", 40)
+            .attr("height", 20)
+            .attr("x", (_, i) => i * 40)
+            .attr("fill", (d) => colorScale(d));
+
+          legend
+            .selectAll("text")
+            .data(legendData)
+            .enter()
+            .append("text")
+            .attr("x", (d, i) => i * 40 + 8)
+            .attr("y", 16)
+            .attr("text-anchor", "start")
+            .attr("font-size", 12)
+            .text((d) => d3.format(".2")(d));
+
+          legend
+            .append("text")
+            .attr("class", "legend-title")
+            .attr("x", 0)
+            .attr("y", 30)
+            .attr("font-size", 12)
+            .attr("text-anchor", "start")
+            .text(dataValue[selectedData]);
+
+          d3.select("#dataSource").on("change", function (e) {
+            const value = d3.select(this).property("value");
+
+            data[value] = data[value].filter(d=>{return d['Code']!=''})
+
+
+            colorScale.domain(
+              d3.extent(data[value], (d) => +d[dataValue[value]])
+            );
+
+            selectedData = value;
+
+            range = d3.extent(data[value], (d) => +d[dataValue[value]]);
+
+
+
+            legendData = [
+              range[0],
+              (range[1] - range[0]) / 6,
+              (range[1] - range[0]) / 4,
+              (range[1] - range[0]) / 2,
+              range[1],
+            ];
+
+            legend
+              .selectAll("rect")
+              .data(legendData)
+              .transition()
+              .duration(500)
+              .attr("fill", (d) => colorScale(d));
+
+            legend
+              .selectAll("text")
+              .data(legendData)
+              .transition()
+              .duration(500)
+              .text((d) => d.toFixed(2));
+
+            legend
+              .select(".legend-title")
+              .transition()
+              .duration(500)
+              .text(dataValue[value]);
+
+            svg
+              .selectAll(".countries path")
+              .transition()
+              .duration(500)
+              .attr("fill", (d) => {
+                const country = data[value].find(
+                  (c) => c["Code"] === d.properties.ISO_A3
+                );
+                return country ? colorScale(country[dataValue[value]]) : "#ccc";
+              });
+          });
+        }
+      );
+    </script>
+  </body>
+</html>
