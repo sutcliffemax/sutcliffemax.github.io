@@ -50,14 +50,14 @@
     <div class="container">
       <select name="data" id="dataSource">
         <option value="1">
-          Mismanaged plastic waste per capita (kg per year)
+          Share of global mismanaged plastic waste
         </option>
         <option value="2">
-          Mismanaged plastic waste to ocean per capita (kg per year)
+          Share of global plastics emitted to ocean
         </option>
         <option value="3">Per capita plastic waste (kg/person/day)</option>
-        <option value="4">Share of global plastics emitted to ocean</option>
-        <option value="5">Share of global mismanaged plastic waste</option>
+        <option value="4">Mismanaged plastic waste per capita (kg per year)</option>
+        <option value="5">Mismanaged plastic waste to ocean per capita (kg per year)</option>
       </select>
       <div id="chart"></div>
     </div>
@@ -69,8 +69,8 @@
         left: 20,
       };
 
-      const height = 600 - margins.top - margins.bottom;
-      const width = 960 - margins.left - margins.right;
+      const height = 700 - margins.top - margins.bottom;
+      const width = 1060 - margins.left - margins.right;
 
       const svg = d3
         .select("#chart")
@@ -89,12 +89,12 @@
       const tooltip = d3.select("body").append("div").attr("class", "tooltip");
 
       Promise.all([
-        d3.json("data/countries.json"),
-        d3.csv("data/plastic-pollution (10).csv"),
-        d3.csv("data/plastic-pollution (11).csv"),
-        d3.csv("data/plastic-pollution (12).csv"),
-        d3.csv("data/plastic-pollution (13).csv"),
-        d3.csv("data/plastic-pollution (14).csv"),
+        d3.json("countries.json"),
+        d3.csv("plastic-pollution (10).csv"),
+        d3.csv("plastic-pollution (11).csv"),
+        d3.csv("plastic-pollution (12).csv"),
+        d3.csv("plastic-pollution (13).csv"),
+        d3.csv("plastic-pollution (14).csv"),
       ]).then(
         ([
           topojson,
@@ -122,7 +122,7 @@
 
           let selectedData = "1";
 
-          data[selectedData] = data[selectedData].filter(d=>{return d['Code']!=''})
+          data[selectedData] = data[selectedData].filter(d=>{return d['Code']!='' && d['Code']!='COM'})
 
           let range = d3.extent(
             data[selectedData],
@@ -251,7 +251,7 @@
           d3.select("#dataSource").on("change", function (e) {
             const value = d3.select(this).property("value");
 
-            data[value] = data[value].filter(d=>{return d['Code']!=''})
+            data[value] = data[value].filter(d=>{return d['Code']!='' && d['Code']!='COM' && d['Code']!='TTO'})
 
 
             colorScale.domain(
@@ -306,5 +306,6 @@
         }
       );
     </script>
-  </body>
+
+</body>
 </html>

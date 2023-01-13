@@ -1,0 +1,35 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/API.json",
+      "format": {"type": "json", "property": "years"}
+    },
+    "title": {
+      "text": "Top 10 Importers of Plastic Waste",
+      "subtitle": "Source: CEPII",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "width": 200,
+    "height": 200,
+    "mark": {"type": "bar", "color": "rgb(25,120,20)"},
+    
+    "encoding": {
+      "x": {
+        "field": "Country",
+        "type": "nominal",
+        "axis": {"grid":false},
+        "sort":"y",
+        "title": ""
+      },
+      "y": {
+        "field": "Trade Value",
+        "type": "quantitative",
+        "axis": {"grid":false},
+        
+        "title": "Value of Plastic Waste Imports (USD)"
+      }
+    }
+  }

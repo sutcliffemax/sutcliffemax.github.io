@@ -12,8 +12,8 @@
     "anchor": "start",
     "subtitle": "Currently only 9% of Plastic Waste is Recycled Globally, Source: OEDC"
   },
-  "width": 380,
-  "height": 250,
+  "width": 440,
+  "height": 300,
   "transform": [
     {"calculate": "year(datum.Year)", "as": "year"},
     {"filter": "datum.year>=minYear"},

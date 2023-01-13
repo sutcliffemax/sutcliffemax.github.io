@@ -1,0 +1,70 @@
+{
+    
+  "title": {
+  "text": 
+    "Plastic Pollution by Country",
+  
+  "subtitle": [ "Source: ourworldindata.org, 2010 - 2019",
+  "Light grey colour indicted there is no data available."],
+  "subtitleFontStyle": "italic",
+  "subtitleFontSize": 10,
+  "anchor": "start",
+  "color": "black"
+},
+"width": 730,
+"height": 400,
+"background": "rgb(255, 255, 255)",
+
+"params": [
+{
+  "name": "Select",
+  "value": "Per capita plastic waste (kg/person/day)",
+  "bind": {
+    "input": "select",
+    "options": ["Mismanaged plastic waste per capita (kg per year)", 
+    "Mismanaged plastic waste to ocean per capita (kg per year)", 
+    "Per capita plastic waste (kg/person/day)"
+    ]
+  }
+}
+],
+
+"data": {
+  "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/VegaMap.csv"
+},
+"transform": [    {
+  "calculate": "datum[Select]",
+  "as": "Select"
+},
+  {
+    "lookup": "country",
+    "from": {
+      "data": {
+        "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/worldtopo.json",
+        "format": {"type": "topojson", "feature": "countries1"},
+         "mark": {
+      "type": "geoshape",
+      "fill": "lightgrey",
+      "stroke": "black"
+    }
+      },
+      "key": "properties.name",
+      "fields": ["properties", "type", "geometry"]
+    }
+  }
+],
+
+"projection": {"type": "naturalearth1"},
+"mark": "geoshape",
+"encoding": {
+"color": {"field": "Select", "type": "quantitative", "scale": {"scheme": "yelloworangered"},
+ "condition": {
+      "test": "datum[Select] === '0' ",
+      "value": "#ddd"
+    }},
+"tooltip": [
+    {"field": "properties.name", "type": "nominal", "title": "country"},
+    {"field": "Select", "type": "quantitative" , "title": "Value"}
+  ]
+}
+}

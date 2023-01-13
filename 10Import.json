@@ -1,0 +1,58 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/API.json",
+      "format": {"type": "json", "property": "years"}
+    },
+    "title": {
+      "text": "Top 10 Importers of Plastic Waste",
+      "subtitle": "Source: CEPII API",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "width": 300,
+    "height": 300,
+    "mark": {"type": "bar", "color": "rgb(25,120,20)"},
+    "encoding": {
+      "x": {
+        "field": "Country",
+        "type": "nominal",
+        "axis": {"grid": false},
+        "sort": "y",
+        "title": ""
+      },
+      "y": {
+        "field": "Trade Value",
+        "type": "quantitative",
+        "axis": {"grid": false},
+        "title": "Value of Plastic Waste Imports (USD)"
+      },
+      "color": {
+          "field": "Country",
+          "type": "nominal",
+          "scale": {
+              "range": [
+                  "#4E79A7",
+                  "#76B7B7",
+                  "#E15759",
+                  "#4E79A7",
+                  "#4E79A7",
+                  "#76B7B7",
+                  "#4E79A7",
+                  "#4E79A7",
+                  "#4E79A7",
+                  "#76B7B7"
+              ],
+              "domain": ["United States", "Malaysia", "Vietnam", "Germany", "Netherlands", "Turkey", "Italy", "Hong Kong", "Canada", "China" ]
+          },
+           "legend": null
+  
+      },
+       "tooltip": [
+        {"field": "Country", "title": "Country"},
+        {"field": "Trade Value", "title": "Trade Value (USD)"}
+      ]
+    }
+  }

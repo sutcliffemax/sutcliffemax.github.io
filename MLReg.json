@@ -1,0 +1,79 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    
+    "data": {
+      "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/MLSupervised.csv"
+    },
+    "height": 300,
+    "width": 500,
+    "layer": [
+      {
+        "mark": {
+          "type": "circle",
+          "color": "darkslateblue",
+          "opacity": 0.8
+        },
+  
+        
+      "selection": {
+          "grid": {"type": "interval", "bind": "scales"}
+        },
+  
+        
+        "title": {
+          "text": "Machine Learning: Predicting Ocean Plastic Pollution ",
+          "subtitle":"Interactive Axis. Data sourced from a variety of places (see colab)", 
+          
+          "subtitleFontStyle": "italic",
+          "subtitleFontSize": 12,
+          "anchor": "start",
+          "color": "black"
+        },
+  
+        
+  
+        "encoding": {
+          "x": {
+            "field": "Tested",
+            "title": "Tested Plastic Waste to the Ocean (kg/year)",
+            "type": "quantitative",
+            "axis": {
+              "tickCount": 8,
+              "labelOverlap": "greedy"
+            }
+          },
+          "y": {
+            "field": "Predicted",
+            "title": "Predicted Plastic Pollution per capita (kg/year)",
+            "type": "quantitative",
+             "axis": {
+              "tickCount": 5,
+              "labelOverlap": "greedy"
+            }
+          }
+        }
+      },
+      {
+        "transform": [
+          {
+            "regression": "Predicted",
+            "on": "Tested",
+            "params": true
+          },
+          {"calculate": "'R²: '+format(datum.rSquared, '.3f')", "as": "R2"}
+        ],
+        "mark": {
+          "type": "text",
+          "color": "black",
+          "x": "width",
+          "align": "right",
+          "y": 15
+        },
+        "encoding": {"text": {"type": "nominal", "field": "R2"}}
+      }
+    ]
+  }
+  
+  
+  

@@ -3,7 +3,7 @@
   
     "hconcat": [ {
     
-    "height": 250, 
+    "height": 300, 
     "width": 250, 
     
     "title": {
@@ -51,7 +51,7 @@
     },
    
     { "width": 250,
-    "height": 250
+    "height": 300
   ,
     "title": {
       "text": "Plastic Mass on the Ocean Surface = 70 000 killer whales",
@@ -84,7 +84,7 @@
          {
           "field": "Weight",
           "type": "quantitative",
-          "title": "000 tonnes a year",
+          "title": "000 tonnes",
           "format": ".0f"
         },
         {

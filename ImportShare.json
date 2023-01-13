@@ -1,0 +1,72 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    
+   
+    "title": {
+      "text": "Share of Plastic Waste Imports by Income Group",
+      "subtitle": [
+        "Source: OWID and World Bank"
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 12,
+      "anchor": "start"
+  
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/sutcliffemax/sutcliffemax.github.io/main/Share.csv"
+    },
+    "height": 300,
+    "width": 300,
+    "mark": {"type": "bar"},
+    "transform": [
+      {"filter": "datum.Year==year"}
+    ],
+    "params": [
+      {
+        "name": "year",
+        "value": 2020,
+        "bind": {
+          "input": "range",
+          "min": 2007,
+          "max": 2021,
+          "step": 1,
+          "name": "Select the year:"
+        }
+      }
+    ],
+    "encoding": {
+      "y": {
+        "field": "Share",
+        "type": "quantitative",
+        "title": "Share of Plastic Waste Imports",
+        "axis": {"grid": false},
+         "scale": {"domain": [0, 75]}
+       
+      },
+      "x": {
+        "field": "Income Group",
+        "type": "nominal",
+        "title": "",
+        "axis": {"grid": false, "labelAngle": 320},
+        "sort": "y"
+      },
+     "color": {
+        "field": "Income Group",
+        "scale": {"scheme": "tableau10"},
+        "legend": {"orient": "top-left", "title": null}
+      },
+      
+      "tooltip": [
+        {"field": "Income Group", "title": "Income Group"},
+        {"field": "Share", "title": "Share of Imports"},
+        {"field": "Year", "title": "Year"}
+      ]
+    }
+  }
+
+
+
+  
+  
+  
