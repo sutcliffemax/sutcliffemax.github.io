@@ -148,7 +148,7 @@
 
           <h3>Plastic in the Ocean</h3>
 
-          <p>The Philippines contributes most to ocean plastic, in part, due to the large number of islands. It is therefore no surprise that the North Pacific contains the most plastic of all the oceans (home to the Great Pacific garbage patch). Globally, the equivalent of one garbage truck of plastic waste is dumped in the ocean every minute!</p>
+          <p>The Philippines contributes the most to ocean plastic, in part, due to the large number of islands. It is therefore no surprise that the North Pacific contains the most plastic of all the oceans (home to the Great Pacific garbage patch). Globally, the equivalent of one garbage truck of plastic waste is dumped in the ocean every minute!</p>
 
         </div>
 
@@ -166,7 +166,7 @@
       <div class="contentO">
 
         <p>
-          The data for the left side of this graph was scraped in python to create a chart with the data source defined inline to increase automation. Unfortunately, the read_html function found no table, so I had to copy the table elements manually using inspect and create an html file. </p>
+          The data for the left side of this graph was scraped in python to create a chart with the data source defined inline, to increase automation. Unfortunately, the read_html function found no table, so I had to copy the table elements manually using inspect and create an html file. </p>
          <p> The data on the size of plastic particles was scraped from a pdf using Tabula. The text was not scraped in a table format, so I pasted it into Chat GPT for it to convert into a table automatically.</p>
          
 
@@ -183,7 +183,7 @@
 
       <div class="contentT">
 
-        <p><a class="textLink" id= "link" href="D3.html">D3 Map</a></p> 
+        <p><a class="textLink" id= "link" href="D3.html">D3 Choropleth</a></p> 
 
         <div class="chart" id="chart3"></div>
         
@@ -194,13 +194,13 @@
 
     <div class="contentO">
 
-          <p>Creating these choropleths were a massive challenge. Initially, I merged three CSV files from OWID and used python to manually change the country names to match the topojson, only to find I had to replace the topojson with one that worked. Following this, I encountered more problems in Vega, such as how to ensure countries with no data still showed up in a default colour. Denes kindly pointed me in the right direction, however by this point I had already created a similar choropleth using D3 for which I have attached a link.</p>
+          <p>Creating these choropleths was a massive challenge. Initially, I merged three CSV files from OWID and used python to manually change the country names to match the topojson, only to find I had to replace the topojson with one that worked. Following this, I encountered more problems in Vega, such as how to ensure countries with no data still showed up in a default colour. Denes kindly pointed me in the right direction, however by this point I had already created a similar choropleth using D3 for which I have attached a link.</p>
        
           <br>
 
           <h3>What are the Trends?</h3>
 
-          <p>Charts 4 and 5 explore how development and income are related to plastic waste generation and pollution. They show that although high-income countries tend to manage waste better, they also tend to generate more. A $20 000 increase in GDP per capita is associated with 4.7kg less mismanaged plastic a year per person but an increase of 0.04kg of plastic waste generated per person per day. </p>
+          <p>Charts 4 and 5 explore how development and income are related to plastic waste generation and pollution. They show that although high-income countries tend to generate more plastic waste, they tend to manage it better. A $20 000 increase in GDP per capita is associated with 4.7kg less mismanaged plastic a year per person but an increase of 0.04kg of plastic waste generated per person per day (14.6kg/person/year). </p>
 
         </div>
 
@@ -265,16 +265,16 @@
 
    <div class="contentO">
 
-          <p>I created the data for the chart on the left by merging a CSV file, containing plastic waste imports by country over time, with a table I scraped, which sorted countries into income groups. I then used python to sum each country’s imports to find the total for each group each year.</p>
+          <p>I created the data for the chart on the left by merging a CSV file, containing plastic waste imports by country over time, with a table I scraped, which sorted countries into income groups. I then used python to sum each country's imports to find the total for each group each year.</p>
 
-          <p>Due to limited data availability on plastic pollution, there are not many APIs, however, I managed to find an API from CEPII on the value of plastic waste imports by country to create an automated chart displaying the top 10.</p>
+          <p>Due to limited data availability on plastic pollution, there are not many APIs, however, I managed to find an API from CEPII on the value of plastic waste imports by country to create an automated chart displaying the top 10 importers.</p>
       
         <br>
 
           <h3>Is it Possible to Predict Plastic Pollution?</h3>
 
         <p>
-          I used sklearn inside python and applied a supervised machine learning algorithm to predict how much plastic waste each country dumps in the Ocean, using variables such as plastic waste generation, population, development etc that I collected from several different sources.
+          Using sklearn, in python, I applied a supervised machine learning algorithm to predict how much plastic waste each country dumps in the Ocean. I used a variety of data from different sources, such as plastic waste generation, population, development etc, to predict each countries contribution.
           
           </p>
         </div>
@@ -301,7 +301,7 @@
 
         <h3>Conclusion</h3>
 
-        <p>Rapidly increasing production of plastic products is overwhelming the world's ability to manage it. Although high-income countries generate much more plastic waste, they pollute far less because they have more effective waste management systems. It is important to note that plastic pollution is a complex global problem that will require a multi-faceted approach to solve. Further research is essential to find effective policies, to start they should be targeted towards helping low-to-middle-income countries to improve waste management and regulation. Increasing awareness of plastic pollution and discouraging the use of single-use plastic will also play a vital role.</p>
+        <p>Rapidly increasing production of plastic products is overwhelming the world's ability to manage it. Although high-income countries generate much more plastic, they pollute far less because they tend to have more effective waste management systems. Further research is essential to find the most effective policies to reduce plastic pollution, to start they should be targeted towards helping low-to-middle-income countries improve their waste management and regulations. Increasing awareness of plastic pollution and discouraging the use of single-use plastic will also play a vital role.</p>
       </div>
         
       <br>
